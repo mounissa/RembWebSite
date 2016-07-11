@@ -12,7 +12,7 @@ menu_association_adhesion:
 
 menu_actualite:
     path:     /actualite
-    defaults: { _controller: MainBundle:Actualite:get }
+    defaults: { _controller: MainBundle:Front:actualite }
 
 menu_rapport:
     path:     /rapport/{page}
