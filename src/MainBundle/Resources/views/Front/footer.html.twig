@@ -1,0 +1,58 @@
+{% block footer %}
+
+<div class="master">
+                <div id="top_footer"><!-- begin top footer -->
+                    <div class="wrap">
+                        <div class="tweetsFeed"></div>
+                    </div>
+                </div><!-- end top footer -->
+                
+                <div id="middle_footer"><!-- begin middle footer -->
+                    <div class="wrap row" >
+                            <div class="third col-md-3">
+                                <h5>Association</h5>
+                                <ul>
+                                    <li><a href="{{ path('menu_association_presentation') }}">Qui sommes nous ?</a></li>
+                                    <li><a href="{{ path('menu_association_adhesion') }}">Adhésion</a></li>
+                                </ul>
+                            </div>
+                            
+                            <div class="third col-md-3">
+                                <h5>Boites à outils</h5>
+                                <ul>
+                                    <li><a href="{{ path('menu_rapport', {'page':1}) }}">Rapport de stage</a></li>
+                                    <li><a href="{{ path('menu_rapport', {'page':2}) }}">Thèse</a></li>
+                                    <li><a href="{{ path('menu_rapport',{'page':3}) }}">Mémoire</a></li>
+                                </ul>
+                            </div>
+                            
+                            <div class="third last col-md-3">
+                                <h5>Offres</h5>
+                                <ul>
+                                    <li><a href="{{ path('menu_offre',{'page':1}) }}">Emploi</a></li>
+                                    <li><a href="{{ path('menu_offre',{'page':2}) }}">Stage</a></li>
+                                </ul>
+                            </div>
+                            
+                            <div class="third last col-md-3">
+                                <h5>Forum, chat</h5>
+                                <ul>
+                                    <li><a href="{{ path('menu_forum') }}">Forum</a></li>
+                                    <li><a href="{{ path('menu_chat') }}">Chat</a></li>
+                                </ul>
+                            </div>
+                        
+                        
+                    </div>
+                </div><!-- end middle footer -->
+                </div>
+                
+                    <div id="bottom_footer" class=""><!-- begin bottom footer -->
+                        <div class="master">
+                            <div class="wrap">
+                                <img src="{{ asset('images/logo_footer.png') }}" class="left" alt="" />
+                                <p class="right">(c) 2016 REMB-Tous droit réservés</p>
+                            </div>
+                        </div><!-- end bottom footer -->
+                    </div>
+{% endblock %}

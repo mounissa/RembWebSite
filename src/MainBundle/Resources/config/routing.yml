@@ -1,0 +1,50 @@
+main_homepage:
+    path:     /accueil
+    defaults: { _controller: MainBundle:Front:index }
+
+menu_association_presentation:
+    path:     /presentation
+    defaults: { _controller: MainBundle:Front:presentation }
+
+menu_association_adhesion:
+    path:     /adhesion
+    defaults: { _controller: MainBundle:Front:adhesion }
+
+menu_actualite:
+    path:     /actualite
+    defaults: { _controller: MainBundle:Actualite:get }
+
+menu_rapport:
+    path:     /rapport/{page}
+    defaults: { _controller: MainBundle:Front:rapport , page:1}
+    requirements:
+        page:  \d*
+
+menu_offre:
+    path:     /offre/{page}
+    defaults: { _controller: MainBundle:Front:offre , page:1}
+    requirements:
+       page:    \d*
+
+detail_offre:
+    path:     /detail_offre/{id}
+    defaults: { _controller: MainBundle:Front:detailOffre}
+    requirements:
+        page:  \d+
+
+menu_forum:
+    path:     /forum
+    defaults: { _controller: MainBundle:Front:forum }
+
+menu_chat:
+    path:     /chat
+    defaults: { _controller: MainBundle:Front:chat }
+
+menu_contact:
+    path:     /contact
+    defaults: { _controller: MainBundle:Front:contact }
+
+
+menu_connexion:
+    path:     /connexion
+    defaults: { _controller: MainBundle:Front:connexion }

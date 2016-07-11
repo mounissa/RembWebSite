@@ -1,0 +1,55 @@
+.input-rapport .form-control{
+	
+	
+}
+.titre-boite-outil{
+	padding:5px;
+	border-left:2px solid rgba(46, 138, 138,0.8);
+	border-bottom:4px solid rgba(46, 138, 139,1);
+	border-radius:10px;
+	font-size:30px;
+}
+#download{
+	
+	font-size:20px;
+	float:right;
+}
+#recherche_rapport{
+	margin:25px 0px 0px 0px;
+}
+#liste_rapport{
+	
+	margin:10px;
+	
+/* 	width:800px; */
+}
+#liste_rapport h4{
+	
+	color:rgba(46, 138, 138, 1);
+	font-weight:bold;
+}
+#liste_rapport #resultat_recherche{
+	
+	padding:6px;
+	border:1px solid silver;
+	margin-bottom:8px;
+	font-size:16px;
+	
+}
+
+#liste_rapport #resultat_recherche li{
+	
+	list-style:none;
+}
+#liste_rapport a:hover #resultat_recherche {
+	
+	background-color:#E8E8E8 ;
+	font-style:none;
+}
+
+#liste_rapport #resultat_recherche .date_publication{
+	
+	font-style:italic;
+	color:grey;
+	
+}

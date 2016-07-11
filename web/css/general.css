@@ -1,0 +1,228 @@
+html,body{
+	
+	height:100%;
+	background-color: #f2f2f2;
+}
+
+.master{
+	
+	margin: 0 auto;
+	width:80%;
+	/*box-shadow:5px 5px 5px 6px silver;*/
+	padding-top:10px;
+	
+}
+.main{
+	margin:0px;
+	overflow:hidden;
+	
+}
+
+header{
+	
+	height:auto;
+}
+header ul{
+	
+	
+/* 	background-color: rgba(46, 138, 138, 1); */
+	margin: 0 auto;
+	color:black;
+	width:80%;
+}
+.top-header{
+	
+/* 	background-color: rgba(46, 138, 138, 1); */
+	height:auto;
+	
+}
+
+
+p{
+	padding:5px;
+	margin:5px;	
+}
+
+li{
+	
+	text-decoration:none;
+}
+
+a{
+	
+	list-style:none;
+}
+h2{
+	color:black;
+	font-width:bold;
+	font-size:20px;
+}
+h3{
+	margin-left:8px;
+}
+
+#connexion a{
+	
+	/*margin-left:200px;*/
+	
+	
+}
+#calendar {
+		/*max-width: 900px;*/
+		margin: 0 auto;
+}
+
+.article_pagination{
+	float:right;	
+}
+
+/*	Logo
+----------------------------------------*/
+
+/* #logo {float:left;} */
+
+#logo h1 {
+	margin:0px; padding:0px;
+	background:url(../img/logo.jpg) no-repeat;
+	text-indent:-9999px;
+	width:40px;
+	height:40px;
+}
+#logo img{
+	width:60px;
+	height:6àpx;	
+}
+
+/*Social Networks
+----------------------------------------*/
+
+#social_networks{
+	
+	width:auto;
+}
+
+ul#social_networks {
+	float:right;
+	margin:7px 0px 0px 0px;
+}
+
+ul#social_networks li {
+	float:left;
+	margin-left:4px;
+	list-style:none;
+}
+
+ul#social_networks li a {
+	display:block;
+	width:20px;
+	height:20px;
+	-webkit-transition: background 0.2s ease;
+	-moz-transition: background 0.2s ease;
+	-o-transition: background 0.2s ease;
+	transition: background 0.2s ease;
+}
+
+/* ul#social_networks li a.network1 {background:url("../img/social_networks.png") 0px -20px;} */
+/* ul#social_networks li a.network1:hover {background:url("../img/social_networks.png") 0px 0px;} */
+
+/* ul#social_networks li a.network2 {background:url("../img/social_networks.png") 0px -60px;} */
+/* ul#social_networks li a.network2:hover {background:url("../img/social_networks.png") 0px -40px;}  */
+
+ul#social_networks li a.network3 {background:url("../img/social_networks.png") 0px -100px;}
+ul#social_networks li a.network3:hover {background:url("../img/social_networks.png") 0px -80px;}
+
+
+
+/*==================================================
+    5. FOOTER STYLES
+==================================================*/
+footer {
+	margin-top:35px;
+	line-height:20px;
+	font-size:12px;
+	background-color: #f2f2f2;
+ 	background-color:#2f2d2d; 
+	background-image:url("../images/bg_top_header.png");
+	border-top:5px solid #ffdf85;
+	overflow:hidden;
+		
+}
+
+
+/*	5.0 Top Footer
+--------------------------------------------------*/
+
+/*#top_footer {
+	padding:13px 0px 10px 0px;
+	background-color:#494745;
+	background-image:url("../images/bg_bottom_header.png");
+	border-bottom:1px solid rgba(255,255,255,.07);
+}
+
+.tweetsFeed {margin:0px;
+	color:#a49a94;
+	font-family:Georgia, serif;
+	font-style:italic;
+	text-align:center;
+}
+
+.tweetsFeed .jta-tweet-text {
+	padding-left:25px;
+	background:url("../images/icon_twitter.png") no-repeat;
+}
+
+.tweetsFeed .jta-tweet-list {margin:0px;}
+.tweetsFeed .jta-tweet-attributes,
+.tweetsFeed .jta-tweet-retweeter,
+.tweetsFeed .jta-clear {display:none;}*/
+
+/*	5.1 Middle Footer
+--------------------------------------------------*/
+
+#middle_footer {
+	padding:20px 0px;
+	color:#888;
+	border-top:1px solid rgba(0,0,0,.2);
+	overflow:hidden;
+}
+
+#middle_footer h5 {color: white;}
+
+#middle_footer li {
+	padding:5px 0px;
+	background:none;
+	border-bottom:1px dotted #444;
+}
+
+#middle_footer li a {
+	margin:0px;
+	padding-left:12px;
+	color:#929190;
+	background:url("../images/li/li_arrow_orange.png") no-repeat 0px center;
+	-webkit-transition:margin-left 0.1s ease;
+	-moz-transition:margin-left 0.1s ease;
+	-o-transition:margin-left 0.1s ease;
+	transition:margin-left 0.1s ease;
+}
+
+#middle_footer li a:hover {
+	margin-left:3px;
+	color:#f36f36;
+}
+
+/*	5.2 Bottom Footer
+--------------------------------------------------*/
+
+#bottom_footer {
+	padding:15px 0px;
+	color:#494847;
+	background:#1d1c1b;
+	background:rgba(0,0,0,.35);
+	border-top:1px solid rgba(0,0,0,.1);
+	overflow:hidden;
+}
+
+#bottom_footer img {margin:0px;}
+
+#bottom_footer p {margin:4px 0px 0px 0px;}
+

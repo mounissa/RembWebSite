@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Rapports de stage</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="../framework/bootstrap-3.3.6/css/bootstrap.min.css"  >
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" >
+		
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="../framework/bootstrap-3.3.6/css/bootstrap-theme.min.css" >
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="../framework/jquery/jquery-1.12.1.min.js" ></script>
+	<script src="../framework/bootstrap-3.3.6/js/bootstrap.min.js" ></script>  
+	<link href='../framework/fullcalendar-2.6.1/fullcalendar.css' rel='stylesheet' />
+	<link href='../framework/fullcalendar-2.6.1/fullcalendar.print.css' rel='stylesheet' media='print' />
+	<script src='../framework/fullcalendar-2.6.1/lib/moment.min.js'></script>
+	<script src='../framework/fullcalendar-2.6.1/lib/jquery.min.js'></script>
+	<script src='../framework/fullcalendar-2.6.1/fullcalendar.min.js'></script>
+	<script src='../framework/fullcalendar-2.6.1/lang-all.js'></script>
+	<link rel="stylesheet" type="text/css" href="../css/general.css">
+	<link rel="stylesheet" type="text/css" href="../css/accueil.css">
+	<link rel="stylesheet" type="text/css" href="../css/rapport.css">
+	<link rel="stylesheet" type="text/css" href="../css/forum.css">
+	<link rel="stylesheet" media="screen and (max-width:1700px)" type="text/css" href="css/accueil_small_screen.css" >	
+	<script src="../framework/jquery/jquery-1.11.14-ui.min.js" ></script>
+    <link rel="stylesheet" href="../framework/jquery/jquery-1.11.14-ui.css">
+	</script> <script src="../js/script.js"></script>
+	
+	<!-------------------------- FANCYBOX-------------------------------- -->
+	<!-- Add jQuery library -->
+
+<!-- Add mousewheel plugin (this is optional) -->
+	<script type="text/javascript" src="../framework/fancyBox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+
+	<!-- Add fancyBox main JS and CSS files -->
+	<script type="text/javascript" src="../framework/fancyBox/source/jquery.fancybox.js?v=2.1.5"></script>
+	<link rel="stylesheet" type="text/css" href="../framework/fancyBox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+
+	<!-- Add Button helper (this is optional) -->
+	<link rel="stylesheet" type="text/css" href="../framework/fancyBox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" />
+	<script type="text/javascript" src="../framework/fancyBox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+
+	<!-- Add Thumbnail helper (this is optional) -->
+	<link rel="stylesheet" type="text/css" href="../source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" />
+	<script type="text/javascript" src="../framework/fancyBox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+	<!-- Add Media helper (this is optional) -->
+	<script type="text/javascript" src="../framework/fancyBox/source/helpers/jquery.fancybox-media.js?v=1.0.6">
+	</script> <script src="../js/fancy.js"></script>
+  </head>
+  
+  
+  <body>
+  		
+    <header class="hidden-xs hidden-sm hidden-md visible-lg-inline">
+			<div class="master top-header">
+				
+				<span id="logo">
+					<img src="../img/logo2.jpg" style="height:40px; width:40px;"/>
+					
+				</span>
+				<ul id="social_networks">
+<!-- 						 <li><a href="#" class="network1"></a></li> -->
+<!-- 						<li><a href="#" class="network2"></a></li> -->
+						<li><a href="https://www.facebook.com/reseaudes.mahorais?ref=br_rs" class="network3"></a></li>
+						
+				</ul>
+				
+				
+			</div>
+			<nav class="menu">
+				<div class=""><ul class=" nav nav-pills ">
+					
+					<li><a class="" href="accueil.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>  Accueil</a></li>
+					<li class="dropdown"><a href="presentation.html" >Association</a>
+						<ul class="dropdown-menu">
+							<li><a href="presentation.html">Qui sommes nous ?</a></li>
+							<li><a href="adhesion.html">Adhésion</a></li>
+						</ul>
+					
+					</li>	
+					<li><a href="actualite.html">Actualités</a></li>
+					<li><a href="forum.html">Forum,chat</a></li>		
+					<li><a href="offre.html">Emploi,Stages</a></li>
+					<li class="select"><a href="rapport_stage.html">Boite à outils</a>
+						<ul class="dropdown-menu">
+							<li><a href="rapport_stage.html">Rapport de stage</a></li>
+							<li><a href="these.html">Thèse</a></li>
+							<li><a href="memoire.html">Mémoire</a></li>
+						</ul>
+					</li>		
+					<li><a href="contact.html">Contact</a></li>
+					
+				
+				
+     		 <li id="connexion"><a class="fancybox fancybox.iframe" href="connexion.html">Connexion</a></li>
+     		 </ul></div>
+			</nav>
+			<span class="ligne"></span>
+		</header>
+			<header class="visible-xs-block visible-sm-block visible-md-block" >
+			<nav class="menu navbar ">
+				<ul class="nav nav-pills nav-stacked">
+					<li><a class="active" href="">Accueil</a></li>
+					<li class="dropdown"><a href="presentation.html" >Association</a>
+						<ul class="dropdown-menu">
+							<li><a href="presentation.html">Qui sommes nous? </a></li>
+							<li><a href="adhesion.html">Adhésion</a></li>
+						</ul>
+					
+					</li>	
+					<li><a href="actualite.html">Actualités</a></li>
+					<li><a href="chat.html">Forum,chat</a></li>		
+					<li><a href="offre.html">Emploi,Stages</a></li>
+					<li><a href="rapport_stage.html">Boite à outils</a>
+						<ul class="dropdown-menu">
+							<li><a href="rapport_stage.html">Rapport de stage</a></li>
+							<li><a href="these.html">Thèse</a></li>
+							<li><a href="memoire.html">Mémoire</a></li>
+						</ul>
+					</li>		
+					<li><a href="contact.html">Contact</a></li>
+					
+				
+				<li><form class="navbar-form navbar-left" role="search">
+			        <div class="form-group">
+			          <input type="text" class="form-control" placeholder="Rechercher">
+			        </div>
+			        <button type="submit" class="btn btn-primary">Rechercher</button>
+     		 </form></li>
+     		 <li id="connexion"><a class="fancybox fancybox.iframe" href="connexion.html">Connexion</a></li>
+     		 </ul>
+			</nav>
+			<span class="ligne"></span>
+		</header>
+	<section class="container-fluid master row">
+		<h1>Réunion</h1>
+    <section class="col-sm-8" id="liste_post">
+    
+      
+      <div>
+      	<li class="date_publication"> Posté le 12/03/16</li>
+        <p>Haec igitur lex in amicitia sanciatur, ut neque rogemus res turpes nec faciamus rogati.</p>
+        
+        <li><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Par Elisa</li>
+      </div>
+      <div>
+      	<li class="date_publication"> Posté le 15/02/16</li>
+        <p>Lex in amicitia sanciatur, ut neque rogemus res turpes nec faciamus rogati</p>
+        <li><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Par saouda</li>
+      </div>
+      <div>
+      	<li class="date_publication"> Posté le 12/12/15</li>
+        <p>lex in amicitia sanciatur, ut neque rogemus lex in amicitia sanciatur, ut neque
+         rogemus res turpes nec faciamus rogatires turpes nec faciamus rogati</p>
+        <li><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Par Daoud</li>
+      </div>
+      
+      <div >
+      	 <li class="date_publication"> Posté le 02/12/15</li>
+        <p>lex in amicitia sanciatur, ut neque 
+        rogemus res turpes nec lex in amicitia sanciatur, ut neque rogemus res turpes nec faciamus rogati
+        faciamus rogati</p>
+        <li><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Par Marie</li>
+      </div>
+      <br><br><div class="input-group">
+	                 <input type="text" class="form-control" placeholder="Entrez votre commentaire" />
+	                                   <span class="input-group-btn">
+	                                       <button class="btn btn-info" type="button">Envoyez</button>
+	                                   </span>
+	                               </div>
+	           </div>
+ 
+    </section>
+    </div>
+  	<aside class="aside_accueil col-sm-4">
+				<h3 id="titre_agenda"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>  Agenda</h3>
+				<div id="calendar">
+				
+				</div>
+	</aside>
+	
+	</section>
+    
+    <footer ><!-- BEGIN FOOTER -->
+			<div class="master">
+				<div id="top_footer"><!-- begin top footer -->
+					<div class="wrap">
+						<div class="tweetsFeed"></div>
+					</div>
+				</div><!-- end top footer -->
+				
+				<div id="middle_footer"><!-- begin middle footer -->
+					<div class="wrap row" >
+							<div class="third col-md-3">
+								<h5>Association</h5>
+								<ul>
+									<li><a href="presentation.html">Qui sommes nous ?</a></li>
+									<li><a href="adhesion.html">Adhésion</a></li>
+								</ul>
+							</div>
+							
+							<div class="third col-md-3">
+								<h5>Boites à outils</h5>
+								<ul>
+									<li><a href="rapport_stage.html">Rapport de stage</a></li>
+									<li><a href="these.html">Thèse</a></li>
+									<li><a href="memoire.html">Mémoire</a></li>
+								</ul>
+							</div>
+							
+							<div class="third last col-md-3">
+								<h5>Offres</h5>
+								<ul>
+									<li><a href="offre.html">Emploi</a></li>
+									<li><a href="offre.html">Stage</a></li>
+								</ul>
+							</div>
+							
+							<div class="third last col-md-3">
+								<h5>Forum, chat</h5>
+								<ul>
+									<li><a href="forum.html">Forum</a></li>
+									<li><a href="chat.html">Chat</a></li>
+								</ul>
+							</div>
+						
+						
+					</div>
+				</div><!-- end middle footer -->
+				</div>
+				
+					<div id="bottom_footer" class=""><!-- begin bottom footer -->
+						<div class="master">
+							<div class="wrap">
+								<img src="images/logo_footer.png" class="left" alt="" />
+								<p class="right">(c) 2016 REMB-Tous droit réservés</p>
+							</div>
+						</div><!-- end bottom footer -->
+					</div>
+				
+			
+		</footer><!-- END FOOTER -->
+  </body>
+</html>

@@ -1,0 +1,91 @@
+{% block menu %}
+<header class="hidden-xs hidden-sm hidden-md visible-lg-inline">
+           <div class="master top-header">
+				
+<!-- 				<span id="logo"> -->
+<!-- 					<img src="{{ asset('img/logo2.jpg') }}" style="height:40px; width:40px;"/> -->
+					
+<!-- 				</span> -->
+<!-- 				<ul id="social_networks"> -->
+<!-- <!-- 						 <li><a href="#" class="network1"></a></li> --> -->
+<!-- <!-- 						<li><a href="#" class="network2"></a></li> --> -->
+<!-- 						<li><a href="https://www.facebook.com/reseaudes.mahorais?ref=br_rs" class="network3"></a></li> -->
+						
+<!-- 				</ul> -->
+				
+				
+			</div>
+			<nav class="menu navbar-fixed-top">
+				<div class=""><ul class=" nav nav-pills ">
+					<li id="logo"><img src="{{ asset ('img/logo2.jpg') }}" style="height:40px; width:40px;"/> 
+					</li>
+					<li><a class="" href="{{ path('main_homepage') }}"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Accueil</a></li>
+                    <li class="dropdown"><a href="{{ path('menu_association_presentation')}}" >Association</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{{ path('menu_association_presentation')}}">Qui sommes nous ?</a></li>
+                            <li><a href="{{ path('menu_association_adhesion')}}">Adhésion</a></li>
+                        </ul>
+                    
+                    </li>   
+                    <li><a href="{{ path('menu_actualite')}}">Actualités</a></li>
+                    <li><a href="{{ path('menu_forum') }}">Forum,chat</a></li>        
+                    <li><a href="{{ path('menu_offre', {'page':1})}}">Emploi,Stages</a></li>
+                    <li><a href="{{ path('menu_rapport',{'page':1})}}">Boite à outils</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{{ path('menu_rapport',{'page':1})}}">Rapport de stage</a></li>
+                            <li><a href="{{ path('menu_rapport',{'page':2})}}">Thèse</a></li>
+                            <li><a href="{{ path('menu_rapport',{'page':3})}}">Mémoire</a></li>   ""
+                        </ul>
+                    </li>       
+                    <li><a href="{{ path('menu_contact') }}">Contact</a></li>
+                    <ul id="social_networks">
+<!-- 						 <li><a href="#" class="network1"></a></li> -->
+<!-- 						<li><a href="#" class="network2"></a></li> -->
+						<li><a href="https://www.facebook.com/reseaudes.mahorais?ref=br_rs" class="network3"></a></li>
+						
+				</ul>
+                	
+                
+             <li id="connexion"><a class="fancybox fancybox.iframe" href="{{ path('menu_connexion') }}">Connexion</a></li>
+     		 </ul></div>
+     		 <span class="ligne"></span>
+			</nav>
+			
+		</header>
+			<header class="visible-xs-block visible-sm-block visible-md-block" >
+			<nav class="menu navbar ">
+				<ul class="nav nav-pills nav-stacked">
+					<li><a class="active" href="{{ path('main_homepage') }}">Accueil</a></li>
+                    <li class="dropdown"><a href="{{ path('menu_association_presentation') }}" >Association</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{{ path('menu_association_presentation') }}">Qui sommes nous?</a></li>
+                            <li><a href="{{ path('menu_association_adhesion') }}">Adhésion</a></li>
+                        </ul>
+                    
+                    </li>   
+                    <li><a href="{{ path('menu_actualite') }}">Actualités</a></li>
+                    <li><a href="{{ path('menu_chat') }}">Forum,chat</a></li>     
+                    <li><a href="{{ path('menu_offre',{'page':1}) }}">Emploi,Stages</a></li>
+                    <li><a href="{{ path('menu_rapport',{'page':1}) }}">Boite à outils</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{{ path('menu_rapport',{'page':1}) }}">Rapport de stage</a></li>
+                            <li><a href="{{ path('menu_rapport',{'page':2}) }}">Thèse</a></li>
+                            <li><a href="{{ path('menu_rapport',{'page':3}) }}">Mémoire</a></li>
+                        </ul>
+                    </li>       
+                    <li><a href="{{ path('menu_contact') }}l">Contact</a></li>
+                    
+                
+                <li><form class="navbar-form navbar-left" role="search">
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Rechercher">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Rechercher</button>
+             </form></li>
+             <li id="connexion"><a class="fancybox fancybox.iframe" href="connexion.html">Connexion</a></li> 
+     		 </ul>
+			</nav>
+			<span class="ligne"></span>
+		</header>
+{% endblock %}
+        

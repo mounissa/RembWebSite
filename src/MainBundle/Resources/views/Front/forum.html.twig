@@ -1,0 +1,55 @@
+{% extends 'MainBundle::base.html.twig' %}
+{% use 'MainBundle:Front:menu.html.twig' %}
+{% use 'MainBundle:Front:footer.html.twig' %}
+{% block main_master %}
+
+		<div class="master container-fluid" style="margin-top: 35px">
+		  <div >
+		    <h1 class="pull-left">Forums</h1>
+		    <ol class="breadcrumb pull-right where-am-i">
+		      <li class="active">Forums</li>
+		      <li ><a href="chat.html">Chat</a> </li>
+		    </ol>
+		    <div class="clearfix"></div>
+		  </div>
+		  <table class="table forum table-striped">
+		    <thead>
+		      <tr>
+		        <th class="cell-stat"></th>
+		        <th>
+		          <h3>Important</h3>
+		        </th>
+		        <th class="cell-stat text-center hidden-xs hidden-sm">Commentaire</th>
+		        <th class="cell-stat-2x hidden-xs hidden-sm">Auteur</th>
+		      </tr>
+		    </thead>
+		    <tbody>
+		      <tr>
+		        <td class="text-center"><i class="fa fa-question fa-2x text-primary"></i></td>
+		        <td>
+		          <h4><a href="detail-forum.html">Réunion</a><br><small>(Haec igitur lex in amicitia sanciatur, ut neque rogemus)</small></h4>
+		        </td>
+		        <td class="text-center hidden-xs hidden-sm"><a href="#">50</a></td>
+		        <td class="hidden-xs hidden-sm">Par <a href="detail-forum.html">Maxime</a><br><small><i class="fa fa-clock-o"></i> 3 mois </small></td>
+		      </tr>
+		      <tr>
+		        <td class="text-center"><i class="fa fa-exclamation fa-2x text-danger"></i></td>
+		        <td>
+		          <h4><a href="detail-forum.html">Association</a><br><small>(Amicitia sanciatur, ut neque rogemus haec igitur lex in a)</small></h4>
+		        </td>
+		        <td class="text-center hidden-xs hidden-sm"><a href="#">63</a></td>
+		        <td class="hidden-xs hidden-sm">Par <a href="detail-forum.html">Maxime</a><br><small><i class="fa fa-clock-o"></i> 6 mois</small></td>
+		      </tr>
+		       <tr>
+		        <td class="text-center"><i class="fa fa-exclamation fa-2x text-danger"></i></td>
+		        <td>
+		          <h4><a href="detail-forum.html">Ouverture agence Paris</a><br><small>(Spatio curriculoque consuetudo maiorum)</small></h4>
+		        </td>
+		        <td class="text-center hidden-xs hidden-sm"><a href="#">63</a></td>
+		        <td class="hidden-xs hidden-sm">Par <a href="detail-forum.html">Fatima</a><br><small><i class="fa fa-clock-o"></i> 1 ans</small></td>
+		      </tr>
+		    </tbody>
+		  </table>
+		
+		</div>
+{% endblock%}

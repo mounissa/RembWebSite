@@ -1,0 +1,29 @@
+
+
+test_plateforme_home:
+    path:   /{page}
+    defaults: { _controller: testplateformeBundle:Advert:index, page:1}
+    requirements:
+       page:   \d*
+
+test_plateforme_view:
+    path:   /advert/{id}
+    defaults: { _controller: testplateformeBundle:Advert:view}
+    requirements:
+       page:   \d+
+
+test_plateforme_add:
+    path:   /add
+    defaults: { _controller: testplateformeBundle:Advert:add}
+    
+test_plateforme_edit:
+    path:   /edit/{id}
+    defaults: { _controller: testplateformeBundle:Advert:edit}
+    requirements:
+       page:   \d+
+
+test_plateforme_delete:
+    path:   /delete/{id}
+    defaults: { _controller: testplateformeBundle:Advert:delete}
+    requirements:
+       page:   \d+

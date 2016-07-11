@@ -1,0 +1,16 @@
+#liste_post h1{
+
+	background-color: rgba(46, 138, 139,0.6);
+	border-radius:10px;
+}
+#liste_post{
+	
+	margin-top:20px;
+	border-top:2px solid rgba(46, 138, 138,0.8);
+	border-left:4px solid rgba(46, 138, 139,1);
+	border-radius:10px;
+}
+#liste_post div{
+	
+	border-bottom:2px solid silver;
+}

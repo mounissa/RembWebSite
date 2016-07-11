@@ -1,0 +1,63 @@
+{% extends 'MainBundle::base.html.twig' %}
+{% use 'MainBundle:Front:menu.html.twig' %}
+{% use 'MainBundle:Front:footer.html.twig' %}
+{% block main_master %}
+	
+	<div class="row">
+		<form method="GET" action="" class="contact form-horizontal col-md-8 " >
+			<fieldset>
+				<legend>Nous contacter</legend>
+				<div class="form-group">
+					<label for="titre" class="control-label col-sm-2 hidden-xs">Nom</label>
+					<div class="col-sm-7 col-xs-12"> 
+						<input type="text" class="form-control" placeholder="Nom *" name="titre" required="required">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="auteur" class="control-label col-sm-2 hidden-xs">Prenom</label>
+					<div class="col-sm-7 col-xs-12">
+						<input type="text" class="form-control" placeholder="Prenom *" name="auteur" required="required">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="auteur" class="control-label col-sm-2 hidden-xs">Email</label>
+					<div class="col-sm-7 col-xs-12">
+						<input type="email" class="form-control" placeholder="Email *" name="auteur" required="required">
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<label for="auteur" class="control-label col-sm-2 hidden-xs">Message</label>
+					<div class="col-sm-7 col-xs-12">
+				
+						 <textarea rows="10" cols="50" class="form-control" placeholder="Message *" name="mssg" required="required"></textarea> 
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-xs-12 col-sm-offset-2">
+						<input class="btn btn-primary" type="submit" value="Envoyer">
+					</div>
+				</div>	
+	
+	</fieldset>
+	</form>
+		<div class="col-md-4 div-map">
+			<div>
+				<h4><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>  Adresse</h4>
+			  <p>RESEAU DES ÉTUDIANTS <br>MAHORAIS DE BRETAGNE<br>
+			    35000 Rennes</p>
+			</div>
+			
+			<div class="map">
+				<iframe src="https://www.google.com/maps/embed?pb
+						=!1m18!1m12!1m3!1d12672.694101366473!2d-1.66931268352
+						24985!3d48.10819550791308!2m3!1f0!2f0!3f0!3m2!1i1024!2i
+						68!4f13.1!3m3!1m2!1s0x480ede2fa7d69085%3A0
+						x40ca5cd36e4ab30!2sRennes!5e0!3m2!1sfr!2sfr!4v1460470167305"
+						frameborder="0"  allowfullscreen>
+				</iframe>
+			</div>
+		</div>
+	</div>
+	
+{% endblock %}

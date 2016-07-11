@@ -1,0 +1,102 @@
+{% extends 'MainBundle::base.html.twig' %}
+{% use 'MainBundle:Front:menu.html.twig' %}
+{% use 'MainBundle:Front:footer.html.twig' %}
+{% block main_master %}
+	<section "row">
+		<div class="col-sm-8">
+		<h1 class="titre-boite-outil">Rapports de stage</h1>
+		<aside id="recherche_rapport">
+     		 <form class="navbar-form " role="search">
+			        <div class="form-group">
+			          <select class="form-control">
+			          	<option>Rapports de stage</option>
+			          	<option>Thèses</option>
+			          	<option>Mémoires</option>
+			          </select>
+			          <select class="form-control">
+			          	  <option>Tous les domaines</option>
+						  <option>Agriculture, Environnement</option>
+						  <option>Art</option>
+						  <option>Assurance, Banque, Immobilier</option>
+						  <option>Commerce, Vente</option>
+						  <option>Communication</option>
+						  <option>Informatique</option>
+					</select>
+					 <select class="form-control">
+					 	  <option>France entière</option>
+						  <option>Aine</option>
+						  <option>Aisne</option>
+						  <option>Ille-et-vilaine</option>
+						  <option>Indre</option>
+						  <option>Mayotte</option>
+						  <option>Morbihan</option>
+					</select>
+					<br><br><label>Trié par: </label>
+		
+					 <a href="#">date<span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>
+			        </a></div>
+			       
+<!-- 			        <button type="submit" class="btn btn-primary">Rechercher</button> -->
+     		 </form>
+    </aside>
+    <section class="" id="liste_rapport">
+      
+      <a class="fancybox fancybox.iframe" href="detail-rapport.html"><div id="resultat_recherche">
+		<span id="download" class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>
+        <h4>Rapport de stage marketing operationnel</h4>
+        <li class="date_publication"> Publié le 12/03/16</li>
+        <li><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Par Elisa</li>
+        <li><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> Vannes</li>
+        
+      </div></a>
+      <a class="fancybox fancybox.iframe" href="detail-rapport.html"><div id="resultat_recherche">
+        <span id="download" class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>
+        <h4>Rapport de stage administration de base de données</h4>
+        <li class="date_publication"> Publié le 15/02/16</li>
+        <li><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Par saouda</li>
+        <li><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> Bordeaux</li>
+      </div></a>
+      
+      <a class="fancybox fancybox.iframe" href="detail-rapport.html"><div id="resultat_recherche">
+        <span id="download" class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>
+        <h4>Rapport de stage comptabilité</h4>
+        <li class="date_publication"> Publié le 12/12/15</li>
+        <li><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Par Daoud</li>
+        <li><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> Rennes</li>
+      </div></a>
+      
+      <a class="fancybox fancybox.iframe" href="detail-rapport.html"><div id="resultat_recherche">
+        <span id="download" class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>
+        <h4>Rapport de stage marketing operationnel</h4>
+        <li class="date_publication"> Publié le 02/12/15</li>
+        <li><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Par Marie</li>
+		<li><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> Paris</li>
+      </div></a>
+      <nav class="article_pagination">
+				  <ul class="pagination">
+				    <li>
+				      <a href="#" aria-label="Previous">
+				        <span aria-hidden="true">&laquo;</span>
+				      </a>
+				    </li>
+				    <li class="active" ><a href="#">1</a></li>
+				    <li><a href="#">2</a></li>
+				    <li><a href="#">3</a></li>
+				    <li>
+				      <a href="#" aria-label="Next">
+				        <span aria-hidden="true">&raquo;</span>
+				      </a>
+				    </li>
+				  </ul>
+				</nav>
+    </section>
+    </div>
+  	<aside class="aside_accueil col-sm-4">
+				<h3 id="titre_agenda"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>  Agenda</h3>
+				<div id="calendar">
+				
+				</div>
+	</aside>
+	
+	</section>
+{% endblock %}

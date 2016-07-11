@@ -1,0 +1,147 @@
+.aside_accueil{
+	
+	padding:0 5px 5px 5px 5px;
+/* 	background-color: rgba(46, 138, 138,0.1); */
+	
+/* 	margin-left:1px; */
+}
+#calendar{
+	
+	margin-left:3px;
+	border:8px solid white;
+}
+.main_contain col-md-8{
+	
+	padding:none;
+	margin-top:none;
+	
+}
+
+.actu_accueil .actu_img{
+	
+	width:auto;
+	height:auto;
+	
+}
+.actu_accueil .actu_img img{
+	width:300px;
+	height:240px;	
+}
+.actu_accueil .actu{
+	
+	color:#003366;
+	padding:8px;
+	/*background-color:rgba(215, 131, 119, 0.3);*/
+	border:7px solid white;
+}
+
+.actu_accueil div:hover{
+
+	
+	background-color:#E8E8E8 ;
+}
+.actu_accueil h3{
+	
+	font-size:15px;
+	font-weight:bold;
+}
+.menu ul li{
+	
+	display:inline;
+	margin-right:none;
+}
+.menu .select{
+	
+	border-bottom:5px solid #991766;
+}
+.menu ul li a:hover{
+	
+	background-color:white;
+}
+.menu .dropdown-menu li a:hover{
+	
+	background-color:rgba(40, 130, 123, 0.5);
+}
+
+.menu li:hover ul, .menu li li:hover{
+	
+	display:block;
+	background-color:rgba(40, 130, 123,1);
+}
+.menu{
+	
+	background-color:rgba(40, 130, 123, 1);
+	
+	
+}
+
+.menu ul li a{
+	
+	color:black;
+	font-size:16px;
+}
+.menu li ul{
+	
+	z-index:20;
+}
+.ligne{
+	
+	height:3px;
+	background-color:gold;
+	width:100%;
+	position:absolute;	
+	
+}
+/*
+-----------------------------------------------------------------------------------
+--------------------CAROUSEL ACCUEIL-----------------------------------------------
+*/
+.slideshow{
+	
+		/*background-color:steelBlue;*/
+		height:500px;
+		margin:5px;
+		z-index:0p;
+		
+}
+#myCarousel .col-md-7 .carousel .slide{
+	
+	padding-bottom:none;
+	margin-bottom:none;
+}
+.carousel-inner .titre{
+	
+/* 	position:absolute; */
+/* 	top:399px; */
+	color:white;
+	background-color:rgba(0,0,0,0.8);
+	width:600px;
+	/*max-height:70px;*/
+	padding:5px;
+	
+	font-size:13px;
+	font-family: 'PT Sans', sans-serif;
+	
+	
+}
+
+#search_accueil{
+	
+	width:250px;
+}
+.row .actu_accueil{
+	
+	margin-bottom:15px;
+}
+.row .actu_accueil p{
+	
+	margin-right:10px;
+}
+
+#titre_agenda{
+	
+	margin-top:none;
+	padding-top:none;
+	background-color: rgba(46, 138, 138, 0.2);
+}
+

@@ -1,0 +1,26 @@
+.map{
+	
+	padding-bottom:10px;
+	margin-right:10px;
+	margin-bottom:10px;
+	overflow: hidden;
+	
+}
+.map iframe{
+	
+  	width:700px;
+	height:350px;
+	frameborder:0;
+	border:0;
+	
+}
+.contact{
+	
+	margin-top:10px;
+	border-left:6px solid white;
+	
+}
+.div-map{
+	
+	
+}

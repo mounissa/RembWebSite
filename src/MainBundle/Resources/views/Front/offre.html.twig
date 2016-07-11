@@ -1,0 +1,102 @@
+{% extends 'MainBundle::base.html.twig' %}
+{% use 'MainBundle:Front:menu.html.twig' %}
+{% use 'MainBundle:Front:footer.html.twig' %}
+{% block main_master %}
+	<section class="row">
+		<div class="col-sm-8">
+		<h1 class="titre-boite-outil">Offres d'emploi</h1>
+		<aside id="recherche_rapport">
+     		 <form class="navbar-form " role="search">
+			        <div class="form-group">
+			          <select class="form-control">
+			          	<option>Offres d'emploi</option>
+			          	<option>Offres de stage</option>
+			          </select>
+			          <select class="form-control">
+			          	  <option>Tous les domaines</option>
+						  <option>Agriculture, Environnement</option>
+						  <option>Art</option>
+						  <option>Assurance, Banque, Immobilier</option>
+						  <option>Commerce, Vente</option>
+						  <option>Communication</option>
+						  <option>Informatique</option>
+					</select>
+					 <select class="form-control">
+					 	  <option>France entière</option>
+						  <option>Aine</option>
+						  <option>Aisne</option>
+						  <option>Ille-et-vilaine</option>
+						  <option>Indre</option>
+						  <option>Mayotte</option>
+						  <option>Morbihan</option>
+					</select>
+					<br><br><label>Trié par: </label>
+		
+					 <a href="#">date<span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>
+			        </a></div>
+			       
+<!-- 			        <button type="submit" class="btn btn-primary">Rechercher</button> -->
+     		 </form>
+    </aside>
+    <section class="" id="liste_rapport">
+      
+      <a class="fancybox fancybox.iframe" href="{{ path('detail_offre',{'id':1}) }}"><div id="resultat_recherche">
+		
+        <h4>Hôte, hôtesse d'accueil, CDI</h4>
+        <li class="date_publication"> Publié le 17/05/16</li>
+        <li><span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Exelle</li>
+        <li><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> Paris</li>
+        
+      </div></a>
+      <a class="fancybox fancybox.iframe" href="{{ path('detail_offre',{'id':1}) }}"><div id="resultat_recherche">
+       
+        <h4>Développeur informatique, CDI</h4>
+        <li class="date_publication"> Publié le 10/05/16</li>
+        <li><span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Capgemini</li>
+        <li><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> Bordeaux</li>
+      </div></a>
+      
+      <a class="fancybox fancybox.iframe" href="{{ path('detail_offre',{'id':1}) }}"><div id="resultat_recherche">
+        
+        <h4>Gestionnaire relation client, anglais courant, débutant, H/F, 5 mois </h4>
+        <li class="date_publication"> Publié le 04/05/15</li>
+        <li><span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Humanessence</li>
+        <li><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> Clichy(92)</li>
+      </div></a>
+      
+      <a class="fancybox fancybox.iframe" href="{{ path('detail_offre',{'id':1}) }}"><div id="resultat_recherche">
+        
+        <h4>Commercial sédentaire, H/F, CDI </h4>
+        <li class="date_publication"> Publié le 02/05/15</li>
+        <li><span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Orange</li>
+		<li><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> Paris</li>
+      </div></a>
+      <nav class="article_pagination">
+				  <ul class="pagination">
+				    <li>
+				      <a href="#" aria-label="Previous">
+				        <span aria-hidden="true">&laquo;</span>
+				      </a>
+				    </li>
+				    <li class="active" ><a href="#">1</a></li>
+				    <li><a href="#">2</a></li>
+				    <li><a href="#">3</a></li>
+				    <li>
+				      <a href="#" aria-label="Next">
+				        <span aria-hidden="true">&raquo;</span>
+				      </a>
+				    </li>
+				  </ul>
+				</nav>
+    </section>
+    </div>
+  	<aside class="aside_accueil col-sm-4">
+				<h3 id="titre_agenda"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Agenda</h3>
+				<div id="calendar">
+				
+				</div>
+	</aside>
+	
+	</section>
+    
+   {% endblock %}

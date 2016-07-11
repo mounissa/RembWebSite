@@ -1,0 +1,77 @@
+{% extends 'MainBundle::base.html.twig' %}
+{% use 'MainBundle:Front:menu.html.twig' %}
+{% use 'MainBundle:Front:footer.html.twig' %}
+{% block main_master %}
+
+		<section class="form">
+			<form method="POST" action="." class="form-horizontal">
+		<section class="form_adhesion">
+			<form method="GET" action="." class="form-horizontal">
+			<fieldset>
+				<legend>Formulaire d'adhésion</legend>
+				
+				<div class="form-group">
+					<label for="titre" class="control-label col-sm-2 hidden-xs">Nom</label>
+					<div class="col-sm-7 col-xs-12"> 
+						<input type="text" class="form-control" placeholder="Nom *" name="titre" required="required">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="auteur" class="control-label col-sm-2 hidden-xs">Prenom</label>
+					<div class="col-sm-7 col-xs-12">
+						<input type="text" class="form-control" placeholder="Prenom *" name="auteur" required="required">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="auteur" class="control-label col-sm-2 hidden-xs">Adresse</label>
+					<div class="col-sm-7 col-xs-12">
+						<input type="text" class="form-control" placeholder="Adresse" name="auteur" required="required">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="auteur" class="control-label col-sm-2 hidden-xs"></label>
+					<div class="col-sm-7 col-xs-12">
+						<input type="text" class="form-control" placeholder="N° et voie (rue, allée, avenue...)" name="" required="required">
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<label for="auteur" class="control-label col-sm-2 hidden-xs">Code postal*</label>
+					<div class="col-sm-7 col-xs-12">
+						<input type="text" class="form-control" placeholder="Code postal" name="auteur" required="required">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="auteur" class="control-label col-sm-2 hidden-xs">Ville</label>
+					<div class="col-sm-7 col-xs-12">
+						<input type="text" class="form-control" placeholder="Ville" name="auteur" required="required">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="auteur" class="control-label col-sm-2 hidden-xs">Mobile</label>
+					<div class="col-sm-7 col-xs-12">
+						<input type="text" class="form-control" placeholder="Mobile *" name="auteur" required="required">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="auteur" class="control-label col-sm-2 hidden-xs">Email</label>
+					<div class="col-sm-7 col-xs-12">
+						<input type="text" class="form-control" placeholder="Email *" name="auteur" required="required">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="auteur" class="control-label col-sm-2 hidden-xs">Confirmer votre email</label>
+					<div class="col-sm-7 col-xs-12">
+						<input type="text" class="form-control" placeholder="Confirmer votre email" name="auteur" required="required">
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-xs-12 col-sm-offset-2">
+						<input class="btn btn-primary" type="submit" value="Envoyer">
+					</div>
+				</div>
+			</fieldset>
+		</form>
+				
+		</section>
+{% endblock %}
