@@ -4,7 +4,7 @@ namespace MainBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-class FrontController extends Controller
+class ActualiteController extends Controller
 {
     public function getAction()
     {
