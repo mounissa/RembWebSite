@@ -1,0 +1,20 @@
+{% extends 'MainBundle::base.html.twig' %}
+
+{% block menu %}
+
+	<ul>
+		<li style="list-style:none;font-size:16px;"><a href="{{ path('login') }}">Connexion</a></li>
+	<ul>
+{% endblock %}
+
+{% block main_master%}
+	 <span id="logo">
+        <img src="{{ asset('img/logo2.jpg') }}" />
+     </span>
+	
+	<div class="jumbotron">
+			<h1>Bienvenue sur le site de REMB</h1>
+			<p>Notre site est actuellement en construction, veuillez nous excuser du gêne occasionné.</p>
+	<div>
+
+{% endblock %}

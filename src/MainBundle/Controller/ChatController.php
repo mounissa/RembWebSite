@@ -1,11 +1,9 @@
-
 <?php
 
 namespace MainBundle\Controller;
-
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-class ForumController extends Controller
+class ChatController extends Controller
 {
      public function chatAction()
     {

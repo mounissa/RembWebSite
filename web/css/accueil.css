@@ -33,6 +33,7 @@
 	padding:8px;
 	/*background-color:rgba(215, 131, 119, 0.3);*/
 	border:7px solid white;
+	height:400px;
 }
 
 .actu_accueil div:hover{
@@ -49,6 +50,16 @@
 	
 	display:inline;
 	margin-right:none;
+	
+}
+#logo {
+  font-style:italic;
+  /*color:rgba(150, 91, 132, 1);*/
+  color:#d26c22;
+  font-family: "Oswald",sans-serif;
+  font-size: 14px;
+  font-weight:bold;
+
 }
 .menu .select{
 	
@@ -57,6 +68,7 @@
 .menu ul li a:hover{
 	
 	background-color:white;
+	
 }
 .menu .dropdown-menu li a:hover{
 	
@@ -66,11 +78,13 @@
 .menu li:hover ul, .menu li li:hover{
 	
 	display:block;
-	background-color:rgba(40, 130, 123,1);
+	/*background-color:rgba(40, 130, 123,1);*/
+	background-color:rgba(170, 0, 3, 1);
 }
 .menu{
 	
-	background-color:rgba(40, 130, 123, 1);
+	/*background-color:rgba(40, 130, 123, 1);*/
+	background-color:rgba(149, 0, 4, 1);
 	
 	
 }
@@ -87,7 +101,7 @@
 .ligne{
 	
 	height:3px;
-	background-color:gold;
+	background-color:#d26c22;
 	width:100%;
 	position:absolute;	
 	

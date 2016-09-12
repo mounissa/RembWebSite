@@ -1,19 +1,82 @@
 <?php
 
+
 namespace MainBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use MainBundle\Form\Type\ConnexionType;
+use MainBundle\Form\Handler\ConnexionHandler;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Security\Core\SecurityContext;
 
+
+
+/*use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\PasswordType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+*/
 class FrontController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('MainBundle:Front:index.html.twig');
 
+       //$em=$this->getDoctrine()->getManager();
+       
+       $assoc=$this->getDoctrine()->getRepository('MainBundle:WebsiteAssociation')->find(1);
+       $actu=$this->getDoctrine()->getRepository('MainBundle:WebsiteActualite')->findAll();
+       $calendar=$this->getDoctrine()->getRepository('MainBundle:WebsiteAgenda')->findAll();
+      
+       if (!$assoc) {
+        throw $this->createNotFoundException(
+            'aucune donnée trouvée '
+        );
+       }
+
+        return $this->render('MainBundle:Front:index.html.twig', array(
+
+               'assoc'=>$assoc,
+               'actu'=>$actu,
+               'agenda'=>$calendar
+            ));
+    
+    }
+    public function indexTmpAction()
+    {
+        
+        return $this->render('MainBundle:Front:accueil_tmp.html.twig');
     }
     public function presentationAction()
     {
-        return $this->render('MainBundle:Front:presentation.html.twig');
+        $assoc=$this->getDoctrine()->getRepository('MainBundle:WebsiteAssociation')->find(1);
+        $calendar=$this->getDoctrine()->getRepository('MainBundle:WebsiteAgenda')->findAll();
+        
+        $tmpPole=$this->getDoctrine()->getRepository('MainBundle:WebsitePole')->findAll();
+        $poles=array();
+        $tmpReal=$this->getDoctrine()->getRepository('MainBundle:WebsiteRealisation')->findAll();
+        $real=array();
+
+        foreach ($tmpPole as $elmt) {
+            
+            $listImage=$this->getDoctrine()->getRepository('MainBundle:WebsiteImage')->findBy(array('pole'=>$elmt));
+
+            array_push($poles, array(
+                'pole'=>$elmt,
+                'images'=>$listImage));
+
+        }
+        foreach ($tmpReal as $elmt) {
+            $listImage=$this->getDoctrine()->getRepository('MainBundle:WebsiteImage')->findBy(array('realisation'=>$elmt));
+            array_push($real, array(
+                 'realisation'=>$elmt,
+                 'images'=>$listImage
+                ));
+        }
+        return $this->render('MainBundle:Front:presentation.html.twig', array(
+            'assoc'=>$assoc,
+            'agenda'=>$calendar,
+            'realisations'=>$real,
+            'poles'=>$poles,
+        ));
 
     }
      public function adhesionAction()
@@ -21,51 +84,63 @@ class FrontController extends Controller
         return $this->render('MainBundle:Front:adhesion.html.twig');
 
     }
-    public function actualiteAction()
+    public function loginAction(Request $request)
     {
-        return $this->render('MainBundle:Front:actualite.html.twig');
+        
+
+        /*$form=$this->createForm(ConnexionType::class);
+
+        $form->handleRequest($request);
+        
+        
+        if ($form->isSubmitted() && $form->isValid()) {
+            
+            $data=$form->getData();
+            $repository=$this->getDoctrine()->getRepository('MainBundle:WebsiteUtilisateur');
+            $user=$repository->findOneBy(array('mail'=>$data['login'],'mdp'=>$data['password']) );
+            if(!$user){
+                
+                return $this->render('MainBundle:Front:form_connexion.html.twig', array(
+
+                    'form' => $form->createView(), 'error'=>'Votre identifiant ou votre mot de passe est incorect',
+                ));
+            }
+            else{
+
+                 return $this->redirectToRoute('main_homepage');
+            }
+           
+        }*/
+
+ 
+        
+
+    // get the login error if there is one
+
+    $session = $request->getSession();
+
+    if ($request->attributes->has(SecurityContext::AUTHENTICATION_ERROR)) {
+
+        $error = $request->attributes->get(SecurityContext::AUTHENTICATION_ERROR);
+
+    }else {
+
+        $error = $session->get(SecurityContext::AUTHENTICATION_ERROR);
+        $session->remove(SecurityContext::AUTHENTICATION_ERROR);
+    }
+    return $this->render('MainBundle:Front:form_connexion.html.twig', array(
+
+
+                    //'form' => $form->createView(),
+                    'last_username' => $session->get(SecurityContext::LAST_USERNAME),
+                    'error'=> $error,
+                ));
 
     }
-     public function detailOffreAction($id)
-    {
-        return $this->render('MainBundle:Front:detail-offre.html.twig');
+    public function loginTmpAction(Request $request){
 
     }
-    public function offreAction($page)
-    {
-    	if($page==1){
-
-    		return $this->render('MainBundle:Front:offre.html.twig');
-    	}
-        if ($page==2) {
-        	return $this->render('MainBundle:Front:offre_emploi.html.twig');
-        }
-
-    }
-    public function rapportAction($page)
-    {
-        if($page==1){
-
-    		return $this->render('MainBundle:Front:rapport_stage.html.twig');
-    	}
-        if ($page==2) {
-        	return $this->render('MainBundle:Front:these.html.twig');
-        }
-        if ($page==3) {
-        	return $this->render('MainBundle:Front:memoire.html.twig');
-        }
-    }
-    public function forumAction()
-    {
-        return $this->render('MainBundle:Front:forum.html.twig');
-
-    }
-     public function chatAction()
-    {
-        return $this->render('MainBundle:Front:chat.html.twig');
-
-    }
-     public function contactAction()
+    public function contactAction()
     {
         return $this->render('MainBundle:Front:contact.html.twig');
 

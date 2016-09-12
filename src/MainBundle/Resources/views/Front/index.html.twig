@@ -1,15 +1,16 @@
 
 {% extends 'MainBundle::base.html.twig' %}
 {% use 'MainBundle:Front:footer.html.twig' %}
+{% use 'MainBundle:Front:agenda.html.twig' %}
 {% block menu %}
 	 <header class="hidden-xs hidden-sm hidden-md visible-lg-inline">
 	 <div class="master top-header">
                 
                 <span id="logo">
                     <img src="{{ asset('img/logo2.jpg') }}" />
-                    
+                    <p>Apprenons l'art de construire ensemble
                 </span>
-                <img src="{{ asset ('img/graphic.jpg') }}" style="margin:10px;height:40px; width:340px;"/>
+                <!--<img src="{{ asset ('img/graphic.jpg') }}" style="margin:10px;height:40px; width:340px;"/>-->
                 <ul id="social_networks">
 <!--                         <li><a href="#" class="network1"></a></li> -->
 <!--                        <li><a href="#" class="network2"></a></li> -->
@@ -30,6 +31,7 @@
                         </ul>
                     
                     </li>   
+
                     <li><a href="{{ path('menu_actualite')}}">Actualités</a></li>
                     <li><a href="{{ path('menu_forum') }}">Forum,chat</a></li>        
                     <li><a href="{{ path('menu_offre', {'page':1})}}">Emploi,Stages</a></li>
@@ -140,9 +142,11 @@
 					       
      		 			</form>
 						<p class="hidden-xs hidden-sm">
-							Le REMB , l'association qui vous accueille, vous aide et vous accompagne dans votre vie d'étudiant.
+						    {{ assoc.resume}}
+						
 						</p>
-						<p>Phoenice Celsen ante rettulimus, pulsatae maiestatis imperii reus iure postulatus ac lege, incertum qua potuit suffragatione absolvi, aperte convictus familiarem suum cum pileo, quo caput operiebat, incantato vetitis artibus ad templum misisse fatidicum, quaeritatum expresse an ei firmum portenderetur imperium, ut cupiebat, et cunctum.
+						
+						
 						
 				</div>
 		
@@ -152,45 +156,20 @@
 			
 			<article class="main_contain col-md-8">
 				<div class="row actu_accueil">
-					<a href="detail_actualite.html"><div class="col-md-6 actu">
+
+				    {% for elmt in actu %}
+				    <a href="detail_actualite.html"><div class="col-md-6 actu">
 						<div class="actu_img">
-							<h3>Popuur gautilre</h3>
-							<img src="{{ asset ('img/diapo/img1.jpg') }}"></img>
+							<h3>{{elmt.titre}}</h3>
+							<img src="{{ asset ('img/diapo/'~elmt.img) }}"></img>
 						</div>
 						
-						<p >
-						populatam in Phoenice Celsen ante rettulimus, pulsatae maiestatis imperii reus iure postulatus ac lege, incertum qua potuit suffragatione absolvi, aperte convictus familiarem suum cum pileo, quo caput operiebat, incantato vetitis artibus ad templum misisse fatidicum, quaeritatum expresse an ei firmum portenderetur imperium, ut cupiebat, et cunctum.
+						<p>
+						{{elmt.description|truncate(100,true,'...')}}
 						</p>
 					</div></a>
-					<a href="detail_actualite.html"><div class="col-md-6 actu">
-						<div class="actu_img">
-							<h3>Phoenice Celsen </h3>
-							<img src="{{ asset('img/diapo/img2.jpg') }}"></img>	
-						</div>
-						
-						<p >
-						populatam in Phoenice Celsen ante rettulimus, pulsatae maiestatis imperii reus iure postulatus ac lege, incertum qua potuit suffragatione absolvi, aperte convictus familiarem suum cum pileo, quo caput operiebat, incantato vetitis artibus ad templum misisse fatidicum, quaeritatum expresse an ei firmum portenderetur imperium, ut cupiebat, et cunctum.
-						</p>
-					</div></a>
-					<a href="detail_actualite.html"><div class="col-md-6 actu">
-						<div class="actu_img">
-							<h3>Mpuur gautilre</h3>
-							<img src="{{ asset ('img/diapo/img3.jpg') }}"></img>	
-						</div>
-						<p >
-						populatam in Phoenice Celsen ante rettulimus, pulsatae maiestatis imperii reus iure postulatus ac lege, incertum qua potuit suffragatione absolvi, aperte convictus familiarem suum cum pileo, quo caput operiebat, incantato vetitis artibus ad templum misisse fatidicum, quaeritatum expresse an ei firmum portenderetur imperium, ut cupiebat, et cunctum.
-						</p>
-					</div></a>
-					<a href="detail_actualite.html"><div class="col-md-6 actu">
-						<div class="actu_img">
-							<h3>Rulsatae maiestatis</h3>
-							<img src="{{ asset('img/diapo/img1.jpg') }}"></img>	
-						</div>
-						<p >
-						populatam in Phoenice Celsen ante rettulimus, pulsatae maiestatis imperii reus iure postulatus ac lege, incertum qua potuit suffragatione absolvi, aperte convictus familiarem suum cum pileo, quo caput operiebat, incantato vetitis artibus ad templum misisse fatidicum, quaeritatum expresse an ei firmum portenderetur imperium, ut cupiebat, et cunctum.
-						</p>
-					</div></a>
-					
+				    {% endfor %}
+
 				</div>
 			
 			

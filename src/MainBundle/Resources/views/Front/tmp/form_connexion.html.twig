@@ -1,0 +1,27 @@
+{% extends 'MainBundle::base.html.twig' %}
+
+
+{% block main_master%}
+   
+	<h1>Espace admin</h1>
+	<div class="jumbotron">
+	     {% if error  %}
+	         <div class="bg-danger text-danger">{{error.message}}</div><br>
+	     {%endif%}
+		{{ form_start(form) }}
+		<div>
+		    {{form_errors(form)}}
+		</div>
+		<div class='form-group'>
+		  {{ form_label(form.login) }}
+          {{ form_widget(form.login,{'attr': {'class': 'form-control'}},{'attr': {'placeholder': 'Identifiant'}} )}}
+        </div>
+        <div class='form-group'>
+          {{ form_label(form.password) }}
+          {{ form_widget(form.password,{'attr': {'class': 'form-control'}},{'attr': {'placeholder': 'Mot de passe'}} )}}
+        </div>
+        {{form_widget(form.connexion, {'attr':{'class':'btn btn-default'}} )}}
+        {{ form_end(form) }}
+	<div>
+
+{% endblock %}

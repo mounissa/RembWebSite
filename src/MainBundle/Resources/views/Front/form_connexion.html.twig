@@ -1,0 +1,25 @@
+{% extends 'MainBundle::base.html.twig' %}
+
+
+{% block main_master%}
+   
+	<h1>Espace admin</h1>
+	<div class="jumbotron">
+	     {% if error  %}
+	         <div class="bg-danger text-danger">{{error}}</div><br>
+	     {%endif%}
+
+        <form action="{{ path('login_check') }}" method="post">
+            <div class="form-group">
+              <label for="username">Username:</label>
+              <input type="text" id="username"  class="form-control" name="_username" value="{{ last_username }}" />
+            </dvi>
+            <div class="form-group">
+              <label for="password">Password:</label>
+              <input type="password" id="password" class="form-control" name="_password" />
+            </div>
+               <button type="submit">login</button>
+        </form>
+	<div>
+
+{% endblock %}

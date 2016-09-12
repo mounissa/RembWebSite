@@ -1,9 +1,29 @@
+
+
 main_homepage:
-    path:     /accueil
+    path:     accueil
     defaults: { _controller: MainBundle:Front:index }
 
+main_tmp:
+    path:     /accueilTmp
+    defaults: { _controller: MainBundle:Front:indexTmp }
+
+login:
+    path:     /login
+    defaults: { _controller: MainBundle:Front:login }
+
+login_check:
+    path:   /login_check
+
+logout:
+    path:   /logout
+
+login_tmp:  
+    path:  /authentificationTmp
+    defaults: {_controller:MainBundle:Front:loginTmp}
+
 menu_association_presentation:
-    path:     /presentation
+    path:     presentation
     defaults: { _controller: MainBundle:Front:presentation }
 
 menu_association_adhesion:
@@ -16,29 +36,29 @@ menu_actualite:
 
 menu_rapport:
     path:     /rapport/{page}
-    defaults: { _controller: MainBundle:Front:rapport , page:1}
+    defaults: { _controller: MainBundle:Rapport:get , page:1}
     requirements:
         page:  \d*
 
 menu_offre:
     path:     /offre/{page}
-    defaults: { _controller: MainBundle:Front:offre , page:1}
+    defaults: { _controller: MainBundle:Offre:get , page:1}
     requirements:
        page:    \d*
 
 detail_offre:
     path:     /detail_offre/{id}
-    defaults: { _controller: MainBundle:Front:detailOffre}
+    defaults: { _controller: MainBundle:Offre:getById}
     requirements:
         page:  \d+
 
 menu_forum:
     path:     /forum
-    defaults: { _controller: MainBundle:Front:forum }
+    defaults: { _controller: MainBundle:Forum:getAll }
 
 menu_chat:
     path:     /chat
-    defaults: { _controller: MainBundle:Front:chat }
+    defaults: { _controller: MainBundle:Chat:chat }
 
 menu_contact:
     path:     /contact

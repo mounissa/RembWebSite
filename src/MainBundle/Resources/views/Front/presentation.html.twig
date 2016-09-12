@@ -1,6 +1,7 @@
 {% extends 'MainBundle::base.html.twig' %}
 {% use 'MainBundle:Front:menu.html.twig' %}
 {% use 'MainBundle:Front:footer.html.twig' %}
+{% use 'MainBundle:Front:agenda.html.twig' %}
 {% block main_master %}
 
 		<section id="haut" class="presentation row">
@@ -12,69 +13,32 @@
 			<article >
 				
 				<article>
-				<p>
-					Haec igitur lex in amicitia sanciatur, ut neque rogemus res turpes nec faciamus rogati.
-					 Turpis enim excusatio est et minime accipienda cum in ceteris peccatis, tum si quis c
-					 ontra rem publicam se amici causa fecisse fateatur. Etenim eo loco, Fanni et Scaevola, locati
-					  sumus ut nos longe prospicere oporteat futuros casus rei publicae. Deflexit iam ali
-					  quantum de spatio curriculoque consuetudo maiorum.
-				</p>
-				
-				<p>
-					Quapropter a natura mihi videtur potius quam ab indigentia orta amicitia,
-					 applicatione magis animi cum quodam sensu amandi quam cogitatione quantum 
-					 illa res utilitatis esset habitura. Quod quidem quale sit, etiam in bestiis
-					  quibusdam animadverti potest, quae ex se natos ita amant ad quoddam tempus 
-					  et ab eis ita amantur ut facile earum sensus appareat. Quod in homine multo 
-					  est evidentius, primum ex ea caritate quae est inter natos et parentes, quae 
-					  dirimi nisi detestabili.
-				
-				</p>
+				{% autoescape %}
+				{{assoc.presentation|raw}}
+				{% endautoescape %}
 				</article>
 				<article class="equipe">
 					<p>	
 					<h2 id="equipe">Notre équipe</h2>
 					
-						Quapropter a natura mihi videtur potius quam ab indigentia orta amicitia,
-						 applicatione magis animi cum quodam sensu amandi quam cogitatione quantum 
-						 illa res utilitatis esset habitura. Quod quidem quale sit, etiam in bestiis
-						  quibusdam animadverti potest.
+						{% autoescape %}
+						{{assoc.equipeText|raw}}
+						{% endautoescape %}
 					</p>
-					<div >
-						<h3><span class="glyphicon glyphicon-certificate" aria-hidden="true"></span>  Pôle trésorerie et partenariat</h3>
-						<p>Quod in homine multo 
-						  est evidentius, primum ex ea caritate quae est inter natos et parentes, quae 
-						  dirimi nisi detestabili.</p>
-						<img src="{{ asset('img/tresorerie_partenariat/img2.jpg') }}"/>
-						<img src="{{ asset('img/tresorerie_partenariat/img1.jpg') }}"/>
-					</div>
-					<div >
-						<h3><span class="glyphicon glyphicon-certificate" aria-hidden="true"></span>  Pôle administration</h3>
-						<p>Quod in homine multo 
-						  est evidentius, primum ex ea caritate quae est inter natos et parentes, quae 
-						  dirimi nisi detestabili.illa res utilitatis esset habitura. Quod quidem quale sit, etiam in bestiis
-						  quibusdam animadverti potest.</p>
-						<img src="{{ asset ('img/administration/img2.jpg') }}"/>
-						<img src="{{ asset('img/administration/img5.jpg') }}"/>
-					</div>
-					<div>
-						<h3><span class="glyphicon glyphicon-certificate" aria-hidden="true"></span> Pôle éducatif</h3>
-						<p>Quod in homine multo 
-						  est evidentius, primum ex ea caritate quae est inter natos et parentes, quae 
-						  dirimi nisi detestabili.</p>
-						<img src="{{ asset('img/educatif/img1.jpg') }}"/>
-						<img src="{{ asset ('img/educatif/img2.jpg') }}"/>
-					</div>
-					<div>
-						<h3><span class="glyphicon glyphicon-certificate" aria-hidden="true"></span> Pôle culturel</h3>
-						<p>Quod in homine multo 
-						  est evidentius, primum ex ea caritate quae est inter natos et parentes, quae 
-						  dirimi nisi detestabili.</p>
-						<img src="{{ asset ('img/culturel/img1.jpg') }}"/>
-						<img src="{{ asset ('img/culturel/img2.jpg') }}"/>
-						<img src="{{ asset ('img/culturel/img3.jpg') }}"/>
-						<img src="{{ asset ('img/culturel/img4.jpg') }}"/>
-					</div>
+
+					{% for pole in poles %}
+                         <div>
+                         {% autoescape %}
+                            <h3> <span class="glyphicon glyphicon-certificate" aria-hidden="true"></span> {{pole.pole.nom}}</h3>
+                            {{pole.pole.description|raw}}
+                            {% if pole.images|length>0 %}
+      |                      {% for image in pole.images %}
+                              <img src="{{ asset ('img/'~image.url) }}">
+                             {% endfor %}
+                            {% endif %}
+                         {% endautoescape %}
+                         </div>
+					{% endfor %}
 				</article>
 				<article class="realisation ">
 					
@@ -88,8 +52,22 @@
 						  <p>Quod in homine multo 
 						  est evidentius, primum ex ea caritate quae est inter natos et parentes, quae 
 						  dirimi nisi detestabili.</p>
-						  
-						  <div>
+
+						  {% for real in realisations %}
+                            <div>
+                             {% autoescape %}
+                                <h3><span class="glyphicon glyphicon-certificate" aria-hidden="true"></span>{{real.realisation.titre}}</h3>
+                                {% if real.images|length>0 %}
+                                  {% for image in real.images %}
+						  	       <img src="{{ asset('img/'~image.url) }}"/>
+						  	      {% endfor %}
+						  	    {% endif %}
+						  	    {{real.realisation.description|raw}}
+                             {% endautoescape %}
+                            </div>
+						  {% endfor %}
+
+						 <!-- <div>
 						  	<h3><span class="glyphicon glyphicon-certificate" aria-hidden="true"></span> Préparations des futurs étudiant mahorais</h3>
 						  	<img src="{{ asset('img/actualite/prep_bachelier_mayotte1.jpg') }}"/>
 						  	<img src="{{ asset ('img/actualite/prep_bachelier_mayotte2.jpg') }}"/>
@@ -111,7 +89,7 @@
 						  quibusdam animadverti potest, quae ex se natos ita amant ad quoddam tempus 
 						  et ab eis ita amantur ut facile earum sensus appareat.
 						  	</p>
-						  </div>
+						  </div>-->
 						<a id="ancre_haut" href="#haut"><span class="glyphicon glyphicon-arrow-up" aria-hidden="true">Haut page</span></a> 
 				</article>
 			
@@ -138,5 +116,5 @@
 			
 		</section>
 
-{% endblock%}		
+{% endblock %}		
 

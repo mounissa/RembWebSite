@@ -1,0 +1,30 @@
+{% block javascripts %}
+  <script type="text/javascript">
+    $(document).ready(function() {
+
+      var data=[];
+      {% for evt in agenda %}
+            var tmp={ title:'{{ evt.titre }}',
+                      start:'{{evt.dateDeb|date('Y-m-d H:i:s')[:10]}}'+'T'+'{{evt.dateDeb|date('Y-m-d H:i:s')[11:] }}',
+                      end:'{{evt.dateFin|date('Y-m-d H:i:s')[:10]}}'+'T'+'{{evt.dateFin|date('Y-m-d H:i:s')[11:] }}' };
+            data.push(tmp);
+       {% endfor %}
+        console.log(data);
+        $('#calendar').fullCalendar({
+                lang:'fr',
+                header: {
+                    left: 'title',
+                    center:'',
+                    right: ' prev,today,next'
+                },
+                
+                
+                editable: true,
+                eventLimit: true, // allow "more" link when too many events
+                events: data
+        });
+
+    });
+
+    </script>
+{% endblock %}
