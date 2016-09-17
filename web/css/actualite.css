@@ -16,7 +16,11 @@
 	padding-top:8px;
 	padding-bottom:8px;
 	border-top:1px solid silver;
+	height:auto;
+	min-height:150px;
+	color:black;
 }
+
 .other{
 	
 	border-left:1px solid silver;
@@ -46,17 +50,21 @@
 }
 .actualite article img{
 	
-	width:200px;
 	height:auto;
 	max-height:150px;
 	float:left;
 	margin-right:10px;
 }
-.actualite article h2:hover{
+.actualite .list_article article :hover{
+	/*box-shadow:15px 15px 10px silver;*/
 	color:grey;
 	
 }
-
+.actualite .list_article a:hover {
+	text-decoration:none;
+	
+	
+}
 .actualite_detail img, .actualite .une img{
 	
 	width:auto;

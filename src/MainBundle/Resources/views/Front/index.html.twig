@@ -156,7 +156,7 @@
 			
 			<article class="main_contain col-md-8">
 				<div class="row actu_accueil">
-
+                    {% autoescape %}
 				    {% for elmt in actu %}
 				    <a href="detail_actualite.html"><div class="col-md-6 actu">
 						<div class="actu_img">
@@ -165,11 +165,11 @@
 						</div>
 						
 						<p>
-						{{elmt.description|truncate(100,true,'...')}}
+						{{elmt.description|truncate(100,true,'...')|raw}}
 						</p>
 					</div></a>
 				    {% endfor %}
-
+                    {% endautoescape %}
 				</div>
 			
 			

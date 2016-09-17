@@ -10,4 +10,18 @@ namespace MainBundle\Repository;
  */
 class WebsiteImageRepository extends \Doctrine\ORM\EntityRepository
 {
+
+
+
+	/*public function getAllGroupByPole(){
+
+        $em=$this->getEntityManager();
+
+        return $em->createQuery(
+             'select i
+             from MainBundle:WebsiteImage i
+             group by i.pole'
+        	)->getResult();
+
+	}*/
 }

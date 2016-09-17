@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * WebsiteActualite
  *
- * @ORM\Table(name="website_actualite")
+ * @ORM\Table(name="websiteActualite")
  * @ORM\Entity
  * @ORM\Entity(repositoryClass="MainBundle\Repository\WebsiteActualiteRepository") 
  */
@@ -39,7 +39,7 @@ class WebsiteActualite
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="date", type="datetime", nullable=false)
+     * @ORM\Column(name="date", type="date", nullable=false)
      */
     private $date;
 

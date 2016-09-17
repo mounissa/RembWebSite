@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * WebsiteAssociation
  *
- * @ORM\Table(name="website_association")
+ * @ORM\Table(name="websiteAssociation")
  * @ORM\Entity
  * @ORM\Entity(repositoryClass="MainBundle\Repository\WebsiteAssociationRepository") 
  */

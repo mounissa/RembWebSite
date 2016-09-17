@@ -1,5 +1,10 @@
 - voir avec dhitoi si avoir detail evenement lorsque on clique sur en evt de l'agenda
 - maj diapo accueil à partir de l'espace admin
--modifier requête récupéreration pole + image et réalisation: le faire en une seule requête
+- list actualite modifer le style lorsqu'on survole
+- voir si on peut appeler paginator dans repository 
 
 
+SonataAdminBundle
+
+P1(img,img)
+P2(img,img)

@@ -1,5 +1,6 @@
 {% extends 'MainBundle::base.html.twig' %}
 {% use 'MainBundle:Front:menu.html.twig' %}
+{% use 'MainBundle:Front:agenda.html.twig' %}
 {% use 'MainBundle:Front:footer.html.twig' %}
 {% block main_master %}
 		<section class="actualite">
@@ -7,88 +8,45 @@
 			<div class=" col-sm-8">
 				<section class="une">
 						<div class="bandeau_img">
-							<h1>Probitatis et virtutis</h1>
+							<h1>{{lastActu.titre}}</h1>
 							<img src="{{ asset('img/diapo/img3.jpg') }}"></img>
 						
 						</div>
 						
 							<div class="resume">
-								<p>Lorem ipsum dolor sit am, scing elit neg scing elit. In augue neque id nisi dolorsi
-					          ultricies id nisi consectet amt elit auguamet elit.id nisi consectet amt elit auguamet elit.
-					          <br><a href="detail_actualite.html" class="caption-more">...Lire plus</a>
-					          </p>
+								
+								{{ lastActu.description|striptags|truncate(200,false)}}
+					          <br><a href="{{ path('detail_actu',{'id':lastActu.id }) }}" class="caption-more">...Lire plus</a>
+					         
 					       </div>
 							
 						
 				</section>
 				<section class="list_article">
-					<article>
-					<a href="detail_actualite.html"><h2>Cum in ceteris peccatis</h2>
-					<img src="{{ asset('img/diapo/img2.jpg') }}"></img></a>
-					<p>
-						Haec igitur lex in amicitia sanciatur, ut neque rogemus res turpes nec faciamus rogati.
-						 Turpis enim excusatio est et minime accipienda cum in ceteris peccatis, tum si quis c
-						 ontra rem publicam se amici causa fecisse fateatur. Etenim eo loco, Fanni et Scaevola, locati
-						  sumus ut nos longe prospicere oporteat futuros casus rei publicae. Deflexit iam ali
-						  quantum de spatio curriculoque consuetudo maiorum.
-					</p>
-				
-				</article>
-				<article>
-					<a href="detail_actualite.html"><h2>Amantur ut facile earum sensus</h2>
-					<img src="{{ asset('img/diapo/img1.jpg') }}"></img></a>
-					<p>
-						Quapropter a natura mihi videtur potius quam ab indigentia orta amicitia,
-						 applicatione magis animi cum quodam sensu amandi quam cogitatione quantum 
-						 illa res utilitatis esset habitura. Quod quidem quale sit, etiam in bestiis
-						  quibusdam animadverti potest, quae ex se natos ita amant ad quoddam tempus 
-						  et ab eis ita amantur ut facile earum sensus appareat. Quod in homine multo 
-						  est evidentius, primum ex ea caritate quae est inter natos et parentes, quae 
-						  dirimi nisi detestabili scelere non potest; deinde cum similis sensus exstitit amoris, 
-						si aliquem nacti sumus cuius cum moribus et natura congruamus, quod in eo quasi lumen aliquod
-						 probitatis et virtutis perspicere videamur.
-					
-					</p>
-				</article>	
-				<article>
-					<a href="detail_actualite.html"><h2>Neturmpf hgupkdk</h2>
-					<img src="{{ asset('img/diapo/img3.jpg') }}"></img></a>
-					<p>
-						 Gapiyrgvn evidentius, primum ex ea caritate quae est inter natos et parentes, quae 
-						  dirimi nisi detestabili scelere non potest; deinde cum similis sensus exstitit amoris, 
-						si aliquem nacti sumus cuius cum moribus et natura congruamus, quod in eo quasi lumen aliquod
-						 probitatis et virtutis perspicere videamur.
-					
-					</p>
-				
-				</article>
+				    {% autoescape %}
+                    {% for actu in actu %}
+				      <a href="{{ path('detail_actu',{'id':actu.id }) }}"><article>
+					    <img src="{{ asset('img/diapo/'~actu.img) }}"></img><h2>{{actu.titre}}</h2>
+					   
+					    {{ actu.description|truncate(200,false)|raw}}
+				    
+				    </article> </a>
+				     {% endfor %}
+				     {% endautoescape %}
 				<nav class="article_pagination">
-				  <ul class="pagination">
-				    <li>
-				      <a href="#" aria-label="Previous">
-				        <span aria-hidden="true">&laquo;</span>
-				      </a>
-				    </li>
-				    <li class="active" ><a href="#">1</a></li>
-				    <li><a href="#">2</a></li>
-				    <li><a href="#">3</a></li>
-				    <li>
-				      <a href="#" aria-label="Next">
-				        <span aria-hidden="true">&raquo;</span>
-				      </a>
-				    </li>
-				  </ul>
+				    {{ knp_pagination_render(actu) }}
+				   
 				</nav>
 			</section>
 			</div>
 			<aside class=" other col-sm-4">
 				<h2>A la une</h2>
 				<ul>
-					<li><a href="detail_actualite.html"><span class="date">17-04-2016</span> Probitatis et virtutis</a></li>
-					<li><a href="detail_actualite.html"><span class="date">10-04-2016</span> Rimum ex ea caritate quae</a></li>
-					<li><a href="detail_actualite.html"><span class="date">08-04-2016</span> Gapiyrgvn evidentius</a></li>
-					<li><a href="detail_actualite.html"><span class="date">05-04-2016</span> Rimum ex ea caritate quae</a></li>
-					<li><a href="detail_actualite.html"><span class="date">01-04-2016</span> Gapiyrgvn evidentius</a></li>
+				    {% if fourLastActu|length >0 %}
+				      {% for elmt in fourLastActu %}
+					    <li><a href="{{path('detail_actu',{'id':elmt.id}) }}"><span class="date">{{elmt.date|date('Y-m-d')}}</span>{{elmt.titre}}</a></li>
+					  {% endfor %}
+					{% endif %}
 				
 					
 				</ul>

@@ -49,33 +49,15 @@ class FrontController extends Controller
     {
         $assoc=$this->getDoctrine()->getRepository('MainBundle:WebsiteAssociation')->find(1);
         $calendar=$this->getDoctrine()->getRepository('MainBundle:WebsiteAgenda')->findAll();
+        $poles=$this->getDoctrine()->getRepository('MainBundle:WebsitePole')->findAll();
+        $reals=$this->getDoctrine()->getRepository('MainBundle:WebsiteRealisation')->findAll();
         
-        $tmpPole=$this->getDoctrine()->getRepository('MainBundle:WebsitePole')->findAll();
-        $poles=array();
-        $tmpReal=$this->getDoctrine()->getRepository('MainBundle:WebsiteRealisation')->findAll();
-        $real=array();
-
-        foreach ($tmpPole as $elmt) {
-            
-            $listImage=$this->getDoctrine()->getRepository('MainBundle:WebsiteImage')->findBy(array('pole'=>$elmt));
-
-            array_push($poles, array(
-                'pole'=>$elmt,
-                'images'=>$listImage));
-
-        }
-        foreach ($tmpReal as $elmt) {
-            $listImage=$this->getDoctrine()->getRepository('MainBundle:WebsiteImage')->findBy(array('realisation'=>$elmt));
-            array_push($real, array(
-                 'realisation'=>$elmt,
-                 'images'=>$listImage
-                ));
-        }
         return $this->render('MainBundle:Front:presentation.html.twig', array(
             'assoc'=>$assoc,
             'agenda'=>$calendar,
-            'realisations'=>$real,
+            'realisations'=>$reals,
             'poles'=>$poles,
+            
         ));
 
     }

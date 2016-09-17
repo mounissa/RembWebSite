@@ -36,6 +36,11 @@ class WebsiteRealisation
      */
     private $description;
 
+	/**
+	*@ORM\OneToMany(targetEntity="MainBundle\Entity\WebsiteImage",mappedBy="realisation",cascade={"all"})
+	*/
+	private $images;
+
     /**
      * Get id
      *

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Lun 12 Septembre 2016 à 20:52
+-- Généré le :  Sam 17 Septembre 2016 à 16:15
 -- Version du serveur :  5.6.17
 -- Version de PHP :  5.5.12
 
@@ -23,35 +23,35 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Structure de la table `website_actualite`
+-- Structure de la table `websiteactualite`
 --
 
-CREATE TABLE IF NOT EXISTS `website_actualite` (
+CREATE TABLE IF NOT EXISTS `websiteactualite` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `titre` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `description` text COLLATE utf8_unicode_ci NOT NULL,
-  `date` datetime NOT NULL,
+  `date` date NOT NULL,
   `img` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=5 ;
 
 --
--- Contenu de la table `website_actualite`
+-- Contenu de la table `websiteactualite`
 --
 
-INSERT INTO `website_actualite` (`id`, `titre`, `description`, `date`, `img`) VALUES
-(1, 'Popuur gautilre', 'populatam in Phoenice Celsen ante rettulimus, pulsatae maiestatis imperii reus iure postulatus ac lege, incertum qua potuit suffragatione absolvi, aperte convictus familiarem suum cum pileo, quo caput operiebat, incantato vetitis artibus ad templum misisse fatidicum, quaeritatum expresse an ei firmum portenderetur imperium, ut cupiebat, et cunctum.', '0000-00-00 00:00:00', 'img1.jpg'),
-(2, 'Phoenice Celsen ', 'populatam in Phoenice Celsen ante rettulimus, pulsatae maiestatis imperii reus iure postulatus ac lege, incertum qua potuit suffragatione absolvi, aperte convictus familiarem suum cum pileo, quo caput operiebat, incantato vetitis artibus ad templum misisse fatidicum, quaeritatum expresse an ei firmum portenderetur imperium, ut cupiebat, et cunctum.', '0000-00-00 00:00:00', 'img2.jpg'),
-(3, 'Mpuur gautilre', 'populatam in Phoenice Celsen ante rettulimus, pulsatae maiestatis imperii reus iure postulatus ac lege, incertum qua potuit suffragatione absolvi, aperte convictus familiarem suum cum pileo, quo caput operiebat, incantato vetitis artibus ad templum misisse fatidicum, quaeritatum expresse an ei firmum portenderetur imperium, ut cupiebat, et cunctum.', '0000-00-00 00:00:00', 'img3.jpg'),
-(4, 'Rulsatae maiestatis', 'Pulsatae maiestatis imperii reus iure postulatus ac lege, incertum qua potuit suffragatione absolvi, aperte convictus familiarem suum cum pileo, quo caput operiebat, incantato vetitis artibus ad templum misisse fatidicum, quaeritatum expresse an ei firmum portenderetur imperium, ut cupiebat, et cunctum.', '0000-00-00 00:00:00', 'img1.jpg');
+INSERT INTO `websiteactualite` (`id`, `titre`, `description`, `date`, `img`) VALUES
+(1, 'Popuur gautilre', '<p>populatam in Phoenice Celsen ante rettulimus, pulsatae maiestatis imperii reus iure postulatus ac lege, incertum qua potuit suffragatione absolvi, aperte convictus familiarem suum cum pileo, quo caput operiebat, incantato vetitis artibus ad templum misisse fatidicum.<p> quaeritatum expresse an ei firmum portenderetur imperium, ut cupiebat, et cunctum.', '2016-09-01', 'img1.jpg'),
+(2, 'Phoenice Celsen ', '<p>populatam in Phoenice Celsen ante rettulimus, pulsatae maiestatis imperii reus iure postulatus ac lege, incertum qua potuit suffragatione absolvi, aperte convictus familiarem suum cum pileo, quo caput operiebat, incantato vetitis artibus ad templum misisse fatidicum, quaeritatum expresse an ei firmum portenderetur imperium, ut cupiebat, et cunctum.', '2016-09-06', 'img2.jpg'),
+(3, 'Mpuur gautilre', '<p>populatam in Phoenice Celsen ante rettulimus, pulsatae maiestatis imperii reus iure postulatus ac lege.<p> incertum qua potuit suffragatione absolvi, aperte convictus familiarem suum cum pileo, quo caput operiebat, incantato vetitis artibus ad templum misisse fatidicum, quaeritatum expresse an ei firmum portenderetur imperium, ut cupiebat, et cunctum.', '2016-09-07', 'img3.jpg'),
+(4, 'Rulsatae maiestatis', '<p>Pulsatae maiestatis imperii reus iure postulatus ac lege, incertum qua potuit suffragatione absolvi, aperte convictus familiarem suum cum pileo, quo caput operiebat, incantato vetitis artibus ad templum misisse fatidicum, quaeritatum expresse an ei firmum portenderetur imperium, ut cupiebat, et cunctum.', '2016-09-12', 'img1.jpg');
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `website_agenda`
+-- Structure de la table `websiteagenda`
 --
 
-CREATE TABLE IF NOT EXISTS `website_agenda` (
+CREATE TABLE IF NOT EXISTS `websiteagenda` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `titre` varchar(80) COLLATE utf8_unicode_ci NOT NULL,
   `auteur` varchar(80) COLLATE utf8_unicode_ci NOT NULL,
@@ -61,44 +61,44 @@ CREATE TABLE IF NOT EXISTS `website_agenda` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=3 ;
 
 --
--- Contenu de la table `website_agenda`
+-- Contenu de la table `websiteagenda`
 --
 
-INSERT INTO `website_agenda` (`id`, `titre`, `auteur`, `dateDeb`, `dateFin`) VALUES
+INSERT INTO `websiteagenda` (`id`, `titre`, `auteur`, `dateDeb`, `dateFin`) VALUES
 (1, 'Journée culturel', '', '2016-09-07 06:15:00', '2016-09-15 16:00:00'),
 (2, 'Sortie sénat', '', '2016-09-20 12:18:00', '2016-09-23 16:30:00');
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `website_association`
+-- Structure de la table `websiteassociation`
 --
 
-CREATE TABLE IF NOT EXISTS `website_association` (
+CREATE TABLE IF NOT EXISTS `websiteassociation` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `presentation` text COLLATE utf8_unicode_ci NOT NULL,
+  `equipeText` text COLLATE utf8_unicode_ci NOT NULL,
   `adresse` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `ville` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
   `pays` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
   `resume` varchar(4000) COLLATE utf8_unicode_ci NOT NULL,
-  `equipeText` text COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
 
 --
--- Contenu de la table `website_association`
+-- Contenu de la table `websiteassociation`
 --
 
-INSERT INTO `website_association` (`id`, `presentation`, `adresse`, `ville`, `pays`, `resume`, `equipeText`) VALUES
-(1, '\r\n\r\n<p>Haec igitur lex in amicitia sanciatur, ut neque rogemus res turpes nec faciamus rogati. Turpis enim excusatio est et minime accipienda cum in ceteris peccatis, tum si quis c ontra rem publicam se amici causa fecisse fateatur. Etenim eo loco, Fanni et Scaevola, locati sumus ut nos longe prospicere oporteat futuros casus rei publicae. Deflexit iam ali quantum de spatio curriculoque consuetudo maiorum.\r\n</p>\r\n<p>Quapropter a natura mihi videtur potius quam ab indigentia orta amicitia, applicatione magis animi cum quodam sensu amandi quam cogitatione quantum illa res utilitatis esset habitura. Quod quidem quale sit, etiam in bestiis quibusdam animadverti potest, quae ex se natos ita amant ad quoddam tempus et ab eis ita amantur ut facile earum sensus appareat. Quod in homine multo est evidentius, primum ex ea caritate quae est inter natos et parentes, quae dirimi nisi detestabili.\r\n</p>', '', '', '', ' Le REMB , l''association qui vous accueille, vous aide et vous accompagne dans votre vie d''étudiant.\r\n\r\nPhoenice Celsen ante rettulimus, pulsatae maiestatis imperii reus iure postulatus ac lege, incertum qua potuit suffragatione absolvi, aperte convictus familiarem suum cum pileo, quo caput operiebat, incantato vetitis artibus ad templum misisse fatidicum, quaeritatum expresse an ei firmum portenderetur imperium, ut cupiebat, et cunctum. ', '<p>Quapropter a natura mihi videtur potius quam ab indigentia orta amicitia, applicatione magis animi cum quodam sensu amandi quam cogitatione quantum illa res utilitatis esset habitura. Quod quidem quale sit, etiam in bestiis quibusdam animadverti potest. ');
+INSERT INTO `websiteassociation` (`id`, `presentation`, `equipeText`, `adresse`, `ville`, `pays`, `resume`) VALUES
+(1, '\r\n\r\n<p>Haec igitur lex in amicitia sanciatur, ut neque rogemus res turpes nec faciamus rogati. Turpis enim excusatio est et minime accipienda cum in ceteris peccatis, tum si quis c ontra rem publicam se amici causa fecisse fateatur. Etenim eo loco, Fanni et Scaevola, locati sumus ut nos longe prospicere oporteat futuros casus rei publicae. Deflexit iam ali quantum de spatio curriculoque consuetudo maiorum.\r\n</p>\r\n<p>Quapropter a natura mihi videtur potius quam ab indigentia orta amicitia, applicatione magis animi cum quodam sensu amandi quam cogitatione quantum illa res utilitatis esset habitura. Quod quidem quale sit, etiam in bestiis quibusdam animadverti potest, quae ex se natos ita amant ad quoddam tempus et ab eis ita amantur ut facile earum sensus appareat. Quod in homine multo est evidentius, primum ex ea caritate quae est inter natos et parentes, quae dirimi nisi detestabili.\r\n</p>', '<p>Quapropter a natura mihi videtur potius quam ab indigentia orta amicitia, applicatione magis animi cum quodam sensu amandi quam cogitatione quantum illa res utilitatis esset habitura. Quod quidem quale sit, etiam in bestiis quibusdam animadverti potest. ', '', '', '', ' Le REMB , l''association qui vous accueille, vous aide et vous accompagne dans votre vie d''étudiant.\r\n\r\nPhoenice Celsen ante rettulimus, pulsatae maiestatis imperii reus iure postulatus ac lege, incertum qua potuit suffragatione absolvi, aperte convictus familiarem suum cum pileo, quo caput operiebat, incantato vetitis artibus ad templum misisse fatidicum, quaeritatum expresse an ei firmum portenderetur imperium, ut cupiebat, et cunctum. ');
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `website_commentaire`
+-- Structure de la table `websitecommentaire`
 --
 
-CREATE TABLE IF NOT EXISTS `website_commentaire` (
+CREATE TABLE IF NOT EXISTS `websitecommentaire` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `id_forum` int(11) DEFAULT NULL,
   `contenu` text COLLATE utf8_unicode_ci NOT NULL,
@@ -110,29 +110,29 @@ CREATE TABLE IF NOT EXISTS `website_commentaire` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `website_droit`
+-- Structure de la table `websitedroit`
 --
 
-CREATE TABLE IF NOT EXISTS `website_droit` (
+CREATE TABLE IF NOT EXISTS `websitedroit` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `libelle` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
 
 --
--- Contenu de la table `website_droit`
+-- Contenu de la table `websitedroit`
 --
 
-INSERT INTO `website_droit` (`id`, `libelle`) VALUES
+INSERT INTO `websitedroit` (`id`, `libelle`) VALUES
 (1, 'ROLE_ADMIN');
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `website_etat_offre`
+-- Structure de la table `websiteetatoffre`
 --
 
-CREATE TABLE IF NOT EXISTS `website_etat_offre` (
+CREATE TABLE IF NOT EXISTS `websiteetatoffre` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `libelle` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
@@ -141,10 +141,10 @@ CREATE TABLE IF NOT EXISTS `website_etat_offre` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `website_forum`
+-- Structure de la table `websiteforum`
 --
 
-CREATE TABLE IF NOT EXISTS `website_forum` (
+CREATE TABLE IF NOT EXISTS `websiteforum` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `auteur` int(11) DEFAULT NULL,
   `titre` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
@@ -156,46 +156,46 @@ CREATE TABLE IF NOT EXISTS `website_forum` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `website_image`
+-- Structure de la table `websiteimage`
 --
 
-CREATE TABLE IF NOT EXISTS `website_image` (
+CREATE TABLE IF NOT EXISTS `websiteimage` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `url` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `pole_id` int(11) DEFAULT NULL,
   `realisation_id` int(11) DEFAULT NULL,
+  `url` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `IDX_9257B493419C3385` (`pole_id`),
-  KEY `IDX_9257B493B685E551` (`realisation_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=17 ;
+  KEY `IDX_5BDCB234419C3385` (`pole_id`),
+  KEY `IDX_5BDCB234B685E551` (`realisation_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=15 ;
 
 --
--- Contenu de la table `website_image`
+-- Contenu de la table `websiteimage`
 --
 
-INSERT INTO `website_image` (`id`, `url`, `pole_id`, `realisation_id`) VALUES
-(1, 'tresorerie_partenariat/img2.jpg', 1, NULL),
-(2, 'tresorerie_partenariat/img1.jpg', 1, NULL),
-(3, 'administration/img2.jpg', 2, NULL),
-(4, 'administration/img5.jpg', 2, NULL),
-(5, 'educatif/img1.jpg', 3, NULL),
-(6, 'educatif/img2.jpg', 3, NULL),
-(7, 'culturel/img1.jpg', 4, NULL),
-(8, 'culturel/img2.jpg', 4, NULL),
-(9, 'culturel/img3.jpg', 4, NULL),
-(10, 'culturel/img4.jpg', 4, NULL),
-(13, 'actualite/prep_bachelier_mayotte1.jpg', NULL, 1),
-(14, 'actualite/prep_bachelier_mayotte2.jpg', NULL, 1),
-(15, 'groupe/img4.jpg', NULL, 2),
-(16, 'groupe/img2.jpg', NULL, 2);
+INSERT INTO `websiteimage` (`id`, `pole_id`, `realisation_id`, `url`) VALUES
+(1, 1, NULL, 'tresorerie_partenariat/img2.jpg'),
+(2, 1, NULL, 'tresorerie_partenariat/img1.jpg'),
+(3, 2, NULL, 'administration/img2.jpg'),
+(4, 2, NULL, 'administration/img5.jpg'),
+(5, 3, NULL, 'educatif/img1.jpg'),
+(6, 3, NULL, 'educatif/img2.jpg'),
+(7, 4, NULL, 'culturel/img1.jpg'),
+(8, 4, NULL, 'culturel/img2.jpg'),
+(9, 4, NULL, 'culturel/img3.jpg'),
+(10, 4, NULL, 'culturel/img4.jpg'),
+(11, NULL, 1, 'actualite/prep_bachelier_mayotte1.jpg'),
+(12, NULL, 1, 'actualite/prep_bachelier_mayotte2.jpg'),
+(13, NULL, 2, 'groupe/img4.jpg'),
+(14, NULL, 2, 'groupe/img2.jpg');
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `website_offre`
+-- Structure de la table `websiteoffre`
 --
 
-CREATE TABLE IF NOT EXISTS `website_offre` (
+CREATE TABLE IF NOT EXISTS `websiteoffre` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `type_offre` int(11) DEFAULT NULL,
   `etat` int(11) DEFAULT NULL,
@@ -220,10 +220,10 @@ CREATE TABLE IF NOT EXISTS `website_offre` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `website_pole`
+-- Structure de la table `websitepole`
 --
 
-CREATE TABLE IF NOT EXISTS `website_pole` (
+CREATE TABLE IF NOT EXISTS `websitepole` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nom` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
   `description` text COLLATE utf8_unicode_ci NOT NULL,
@@ -231,10 +231,10 @@ CREATE TABLE IF NOT EXISTS `website_pole` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=5 ;
 
 --
--- Contenu de la table `website_pole`
+-- Contenu de la table `websitepole`
 --
 
-INSERT INTO `website_pole` (`id`, `nom`, `description`) VALUES
+INSERT INTO `websitepole` (`id`, `nom`, `description`) VALUES
 (1, ' Pôle trésorerie et partenariat', '<p>Quod in homine multo est evidentius, primum ex ea caritate quae est inter natos et parentes, quae dirimi nisi detestabili.</p>'),
 (2, 'Pôle administration', '<p>Quod in homine multo est evidentius, primum ex ea caritate quae est inter natos et parentes, quae dirimi nisi detestabili.illa res utilitatis esset habitura. Quod quidem quale sit, etiam in bestiis quibusdam animadverti potest.</p>'),
 (3, ' Pôle éducatif', '<p>Quod in homine multo est evidentius, primum ex ea caritate quae est inter natos et parentes, quae dirimi nisi detestabili.</p>'),
@@ -243,10 +243,10 @@ INSERT INTO `website_pole` (`id`, `nom`, `description`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `website_rapport`
+-- Structure de la table `websiterapport`
 --
 
-CREATE TABLE IF NOT EXISTS `website_rapport` (
+CREATE TABLE IF NOT EXISTS `websiterapport` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `type_rapport` int(11) DEFAULT NULL,
   `titre` varchar(60) COLLATE utf8_unicode_ci NOT NULL,
@@ -259,10 +259,10 @@ CREATE TABLE IF NOT EXISTS `website_rapport` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `website_realisation`
+-- Structure de la table `websiterealisation`
 --
 
-CREATE TABLE IF NOT EXISTS `website_realisation` (
+CREATE TABLE IF NOT EXISTS `websiterealisation` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `titre` varchar(80) COLLATE utf8_unicode_ci NOT NULL,
   `description` text COLLATE utf8_unicode_ci NOT NULL,
@@ -270,20 +270,20 @@ CREATE TABLE IF NOT EXISTS `website_realisation` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=3 ;
 
 --
--- Contenu de la table `website_realisation`
+-- Contenu de la table `websiterealisation`
 --
 
-INSERT INTO `website_realisation` (`id`, `titre`, `description`) VALUES
+INSERT INTO `websiterealisation` (`id`, `titre`, `description`) VALUES
 (1, ' Préparations des futurs étudiant mahorais', '<p>applicatione magis animi cum quodam sensu amandi quam cogitatione quantum illa res utilitatis esset habitura. Quod quidem quale sit, etiam in bestiis quibusdam animadverti potest, quae ex se natos ita amant ad quoddam tempus et ab eis ita amantur ut facile earum sensus appareat. '),
 (2, 'Quam cogitatione quantum ', '<p>applicatione magis animi cum quodam sensu amandi quam cogitatione quantum illa res utilitatis esset habitura. Quod quidem quale sit, etiam in bestiis quibusdam animadverti potest, quae ex se natos ita amant ad quoddam tempus et ab eis ita amantur ut facile earum sensus appareat. ');
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `website_type_offre`
+-- Structure de la table `websitetypeoffre`
 --
 
-CREATE TABLE IF NOT EXISTS `website_type_offre` (
+CREATE TABLE IF NOT EXISTS `websitetypeoffre` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `libelle` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
@@ -292,10 +292,10 @@ CREATE TABLE IF NOT EXISTS `website_type_offre` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `website_type_rapport`
+-- Structure de la table `websitetyperapport`
 --
 
-CREATE TABLE IF NOT EXISTS `website_type_rapport` (
+CREATE TABLE IF NOT EXISTS `websitetyperapport` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `libelle` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
@@ -304,10 +304,10 @@ CREATE TABLE IF NOT EXISTS `website_type_rapport` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `website_utilisateur`
+-- Structure de la table `websiteutilisateur`
 --
 
-CREATE TABLE IF NOT EXISTS `website_utilisateur` (
+CREATE TABLE IF NOT EXISTS `websiteutilisateur` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `droit` int(11) DEFAULT NULL,
   `mail` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
@@ -320,10 +320,10 @@ CREATE TABLE IF NOT EXISTS `website_utilisateur` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
 
 --
--- Contenu de la table `website_utilisateur`
+-- Contenu de la table `websiteutilisateur`
 --
 
-INSERT INTO `website_utilisateur` (`id`, `droit`, `mail`, `username`, `password`, `nom`, `prenom`) VALUES
+INSERT INTO `websiteutilisateur` (`id`, `droit`, `mail`, `username`, `password`, `nom`, `prenom`) VALUES
 (1, 1, '', 'admin', 'AdminRemb', '', '');
 
 --
@@ -331,42 +331,42 @@ INSERT INTO `website_utilisateur` (`id`, `droit`, `mail`, `username`, `password`
 --
 
 --
--- Contraintes pour la table `website_commentaire`
+-- Contraintes pour la table `websitecommentaire`
 --
-ALTER TABLE `website_commentaire`
-  ADD CONSTRAINT `FK_2C7591356BAEFFFD` FOREIGN KEY (`id_forum`) REFERENCES `website_forum` (`id`);
+ALTER TABLE `websitecommentaire`
+  ADD CONSTRAINT `FK_30AD9366BAEFFFD` FOREIGN KEY (`id_forum`) REFERENCES `websiteforum` (`id`);
 
 --
--- Contraintes pour la table `website_forum`
+-- Contraintes pour la table `websiteforum`
 --
-ALTER TABLE `website_forum`
-  ADD CONSTRAINT `FK_D2410E0155AB140` FOREIGN KEY (`auteur`) REFERENCES `website_utilisateur` (`id`);
+ALTER TABLE `websiteforum`
+  ADD CONSTRAINT `FK_1BCA08A655AB140` FOREIGN KEY (`auteur`) REFERENCES `websiteutilisateur` (`id`);
 
 --
--- Contraintes pour la table `website_image`
+-- Contraintes pour la table `websiteimage`
 --
-ALTER TABLE `website_image`
-  ADD CONSTRAINT `FK_9257B493B685E551` FOREIGN KEY (`realisation_id`) REFERENCES `website_realisation` (`id`),
-  ADD CONSTRAINT `FK_9257B493419C3385` FOREIGN KEY (`pole_id`) REFERENCES `website_pole` (`id`);
+ALTER TABLE `websiteimage`
+  ADD CONSTRAINT `FK_5BDCB234B685E551` FOREIGN KEY (`realisation_id`) REFERENCES `websiterealisation` (`id`),
+  ADD CONSTRAINT `FK_5BDCB234419C3385` FOREIGN KEY (`pole_id`) REFERENCES `websitepole` (`id`);
 
 --
--- Contraintes pour la table `website_offre`
+-- Contraintes pour la table `websiteoffre`
 --
-ALTER TABLE `website_offre`
-  ADD CONSTRAINT `FK_F8EC36A355CAF762` FOREIGN KEY (`etat`) REFERENCES `website_etat_offre` (`id`),
-  ADD CONSTRAINT `FK_F8EC36A3A18A0198` FOREIGN KEY (`type_offre`) REFERENCES `website_type_offre` (`id`);
+ALTER TABLE `websiteoffre`
+  ADD CONSTRAINT `FK_3167300455CAF762` FOREIGN KEY (`etat`) REFERENCES `websiteetatoffre` (`id`),
+  ADD CONSTRAINT `FK_31673004A18A0198` FOREIGN KEY (`type_offre`) REFERENCES `websitetypeoffre` (`id`);
 
 --
--- Contraintes pour la table `website_rapport`
+-- Contraintes pour la table `websiterapport`
 --
-ALTER TABLE `website_rapport`
-  ADD CONSTRAINT `FK_121ADC389615CF69` FOREIGN KEY (`type_rapport`) REFERENCES `website_type_rapport` (`id`);
+ALTER TABLE `websiterapport`
+  ADD CONSTRAINT `FK_1A3F9AA89615CF69` FOREIGN KEY (`type_rapport`) REFERENCES `websitetyperapport` (`id`);
 
 --
--- Contraintes pour la table `website_utilisateur`
+-- Contraintes pour la table `websiteutilisateur`
 --
-ALTER TABLE `website_utilisateur`
-  ADD CONSTRAINT `FK_56999A3ACB7AA751` FOREIGN KEY (`droit`) REFERENCES `website_droit` (`id`);
+ALTER TABLE `websiteutilisateur`
+  ADD CONSTRAINT `FK_79E6D239CB7AA751` FOREIGN KEY (`droit`) REFERENCES `websitedroit` (`id`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

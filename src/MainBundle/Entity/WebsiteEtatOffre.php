@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * WebsiteEtatOffre
  *
- * @ORM\Table(name="website_etat_offre")
+ * @ORM\Table(name="websiteEtatOffre")
  * @ORM\Entity
  */
 class WebsiteEtatOffre

@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Image
  *
- * @ORM\Table(name="website_image")
+ * @ORM\Table(name="websiteImage")
  * @ORM\Entity(repositoryClass="MainBundle\Repository\WebsiteImageRepository")
  */
 class WebsiteImage
@@ -28,14 +28,14 @@ class WebsiteImage
      */
     private $url;
 
-	/**
-   * @ORM\ManyToOne(targetEntity="MainBundle\Entity\websitePole")
+   /**
+   * @ORM\ManyToOne(targetEntity="MainBundle\Entity\WebsitePole",inversedBy="images",cascade={"all"})
    * @ORM\JoinColumn(nullable=true)
    */
    private $pole;
   
    /**
-   * @ORM\ManyToOne(targetEntity="MainBundle\Entity\websiteRealisation")
+   * @ORM\ManyToOne(targetEntity="MainBundle\Entity\WebsiteRealisation", inversedBy="images",cascade={"all"})
    * @ORM\JoinColumn(nullable=true)
    */
    private $realisation;

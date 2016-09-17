@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * WebsiteUtilisateur
  *
- * @ORM\Table(name="website_utilisateur", indexes={@ORM\Index(name="droit", columns={"droit"})})
+ * @ORM\Table(name="websiteUtilisateur", indexes={@ORM\Index(name="droit", columns={"droit"})})
  * @ORM\Entity
  */
 class WebsiteUtilisateur implements UserInterface, \Serializable

@@ -31,8 +31,12 @@ menu_association_adhesion:
     defaults: { _controller: MainBundle:Front:adhesion }
 
 menu_actualite:
-    path:     /actualite
-    defaults: { _controller: MainBundle:Actualite:get }
+    path:     /actualite/{page}
+    defaults: { _controller: MainBundle:Actualite:getAll, page:1 }
+
+detail_actu:
+    path: /detail_actu/{id}
+    defaults: { _controller:MainBundle:Actualite:getById }
 
 menu_rapport:
     path:     /rapport/{page}

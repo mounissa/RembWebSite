@@ -1,0 +1,28 @@
+{% extends 'MainBundle::base.html.twig' %}
+{% use 'MainBundle:Front:menu.html.twig' %}
+{% use 'MainBundle:Front:footer.html.twig' %}
+{% use 'MainBundle:Front:agenda.html.twig'%}
+
+{% block main_master %}
+
+		<section class="actualite_detail row">
+			<div class="col-sm-8">
+			
+			<h1>{{actu.titre}}</h1>
+			<img src="{{asset('img/diapo/'~actu.img)}}"></img>
+			<article >
+				
+				{% autoescape %}
+				 {{actu.description|raw}}
+			    {% endautoescape %}
+			</article>
+			</div>
+			<aside class="aside_accueil col-sm-4">
+				<h3 id="titre_agenda"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>  Agenda</h3>
+				<div id="calendar">
+				
+				</div>
+			</aside>
+			
+		</section>
+{% endblock%}

@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * WebsitePole
  *
- * @ORM\Table(name="website_pole")
+ * @ORM\Table(name="websitePole")
  * @ORM\Entity
  * @ORM\Entity(repositoryClass="MainBundle\Repository\WebsitePoleRepository") 
  */
@@ -35,12 +35,17 @@ class WebsitePole
      * @ORM\Column(name="description", type="text", length=65535, nullable=false)
      */
     private $description;
+	/**
+	* @ORM\OneToMany(targetEntity="MainBundle\Entity\WebsiteImage", mappedBy="pole",cascade={"remove","persist"})
+	*/
+	private $images;
 
     /**
      * Get id
      *
      * @return integer
      */
+	
     public function getId()
     {
         return $this->id;
@@ -93,5 +98,45 @@ class WebsitePole
     {
         return $this->description;
     }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->images = new \Doctrine\Common\Collections\ArrayCollection();
+    }
 
+    /**
+     * Add image
+     *
+     * @param \MainBundle\Entity\WebsiteImage $image
+     *
+     * @return WebsitePole
+     */
+    public function addImage(\MainBundle\Entity\WebsiteImage $image)
+    {
+        $this->images[] = $image;
+
+        return $this;
+    }
+
+    /**
+     * Remove image
+     *
+     * @param \MainBundle\Entity\WebsiteImage $image
+     */
+    public function removeImage(\MainBundle\Entity\WebsiteImage $image)
+    {
+        $this->images->removeElement($image);
+    }
+
+    /**
+     * Get images
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getImages()
+    {
+        return $this->images;
+    }
 }

@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * WebsiteAgenda
  *
- * @ORM\Table(name="website_agenda")
+ * @ORM\Table(name="websiteAgenda")
  * @ORM\Entity
  * @ORM\Entity(repositoryClass="MainBundle\Repository\WebsiteAgendaRepository") 
  */

@@ -28,14 +28,14 @@ class WebsiteImage
      */
     private $url;
 
-	/**
-   * @ORM\ManyToOne(targetEntity="MainBundle\Entity\websitePole")
+   /**
+   * @ORM\ManyToOne(targetEntity="MainBundle\Entity\WebsitePole",inversedBy="images",cascade={"all"})
    * @ORM\JoinColumn(nullable=true)
    */
    private $pole;
   
    /**
-   * @ORM\ManyToOne(targetEntity="MainBundle\Entity\websiteRealisation")
+   * @ORM\ManyToOne(targetEntity="MainBundle\Entity\WebsiteRealisation", inversedBy="images",cascade={"all"})
    * @ORM\JoinColumn(nullable=true)
    */
    private $realisation;
@@ -96,5 +96,29 @@ class WebsiteImage
     public function getPole()
     {
         return $this->pole;
+    }
+
+    /**
+     * Set realisation
+     *
+     * @param \MainBundle\Entity\websiteRealisation $realisation
+     *
+     * @return WebsiteImage
+     */
+    public function setRealisation(\MainBundle\Entity\websiteRealisation $realisation = null)
+    {
+        $this->realisation = $realisation;
+
+        return $this;
+    }
+
+    /**
+     * Get realisation
+     *
+     * @return \MainBundle\Entity\websiteRealisation
+     */
+    public function getRealisation()
+    {
+        return $this->realisation;
     }
 }

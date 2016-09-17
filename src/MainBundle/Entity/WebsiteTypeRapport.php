@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * WebsiteTypeRapport
  *
- * @ORM\Table(name="website_type_rapport")
+ * @ORM\Table(name="websiteTypeRapport")
  * @ORM\Entity
  */
 class WebsiteTypeRapport

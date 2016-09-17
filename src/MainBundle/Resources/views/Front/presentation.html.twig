@@ -29,8 +29,8 @@
 					{% for pole in poles %}
                          <div>
                          {% autoescape %}
-                            <h3> <span class="glyphicon glyphicon-certificate" aria-hidden="true"></span> {{pole.pole.nom}}</h3>
-                            {{pole.pole.description|raw}}
+                            <h3> <span class="glyphicon glyphicon-certificate" aria-hidden="true"></span> {{pole.nom}}</h3>
+                            {{pole.description|raw}}
                             {% if pole.images|length>0 %}
       |                      {% for image in pole.images %}
                               <img src="{{ asset ('img/'~image.url) }}">
@@ -56,13 +56,13 @@
 						  {% for real in realisations %}
                             <div>
                              {% autoescape %}
-                                <h3><span class="glyphicon glyphicon-certificate" aria-hidden="true"></span>{{real.realisation.titre}}</h3>
-                                {% if real.images|length>0 %}
+                                <h3><span class="glyphicon glyphicon-certificate" aria-hidden="true"></span>{{real.titre}}</h3>
+                                {% if real.images|length >0 %}
                                   {% for image in real.images %}
 						  	       <img src="{{ asset('img/'~image.url) }}"/>
 						  	      {% endfor %}
 						  	    {% endif %}
-						  	    {{real.realisation.description|raw}}
+						  	    {{real.description|raw}}
                              {% endautoescape %}
                             </div>
 						  {% endfor %}
