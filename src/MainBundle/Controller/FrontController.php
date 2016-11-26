@@ -124,7 +124,11 @@ class FrontController extends Controller
     }
     public function contactAction()
     {
-        return $this->render('MainBundle:Front:contact.html.twig');
+
+        $assoc=$this->getDoctrine()->getRepository('MainBundle:WebsiteAssociation')->find(1);
+        return $this->render('MainBundle:Front:contact.html.twig',array(
+            'assoc'=>$assoc
+            ));
 
     }
       public function connexionAction()

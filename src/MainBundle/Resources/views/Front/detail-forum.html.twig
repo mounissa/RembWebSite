@@ -1,0 +1,46 @@
+{% extends 'MainBundle::base.html.twig'%} 
+{% use 'MainBundle:Front:menu.html.twig' %}
+{% use 'MainBundle:Front:agenda.html.twig' %}
+{% use 'MainBundle:Front:footer.html.twig' %}
+
+{% block main_master %}
+
+
+	<h1>{{listCommentaire[0].forum.titre}}</h1>
+
+   <section  id="liste_post">
+    <div class="row">
+     <div class="col-sm-8">
+      {% for elmt in listCommentaire %}
+       <div id="commentaire">
+      	<li class="date_publication"> Posté le {{elmt.dateCreate|date("d/m/Y")}}</li>
+        <p>{{elmt.contenu}}</p>
+        
+        <li><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Par {{elmt.utilisateur.nom}}</li>
+      </div><br><br>
+      {%endfor%}
+
+      {{form_start(form)}}
+      <p class="bg-danger info-forum">Après avoir cliqué sur "envoyez", vous serez invité à vous connecter pour que votre message soit publié. </p></br>
+      <div class="input-group">
+
+          {{form_widget(form.contenu,{'attr':{'placeholder':'Entrez votre commentaire','class':'form-control'}}) }}
+           <span class="input-group-btn">
+              {{form_widget(form.btn_envoyez,{'attr':{'class':'btn btn-info'}})}}
+          </span>
+      </div>
+      {{form_end(form)}}
+	         
+    </div>
+     
+    <aside class="aside_accueil col-sm-4">
+		<h3 id="titre_agenda"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Agenda</h3>
+		<div id="calendar"></div>
+	</aside>
+   
+     </div>
+   </section>
+	
+{% endblock %}
+    
+   

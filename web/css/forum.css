@@ -9,8 +9,19 @@
 	border-top:2px solid rgba(46, 138, 138,0.8);
 	border-left:4px solid rgba(46, 138, 139,1);
 	border-radius:10px;
+	padding:5px;
 }
-#liste_post div{
+#liste_post li{
+	list-style:none;
+}
+#liste_post #commentaire{
 	
 	border-bottom:2px solid silver;
+}
+#liste_post .info-forum{
+		
+	color:IndianRed;
+	font-weight:bold;
+	border-radius:8px;
+	
 }

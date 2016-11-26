@@ -1,20 +1,6 @@
 {% block menu %}
 <header class="hidden-xs hidden-sm hidden-md visible-lg-inline">
-           <div class="master top-header">
-				
-<!-- 				<span id="logo"> -->
-<!-- 					<img src="{{ asset('img/logo2.jpg') }}" style="height:40px; width:40px;"/> -->
-					
-<!-- 				</span> -->
-<!-- 				<ul id="social_networks"> -->
-<!-- <!-- 						 <li><a href="#" class="network1"></a></li> --> -->
-<!-- <!-- 						<li><a href="#" class="network2"></a></li> --> -->
-<!-- 						<li><a href="https://www.facebook.com/reseaudes.mahorais?ref=br_rs" class="network3"></a></li> -->
-						
-<!-- 				</ul> -->
-				
-				
-			</div>
+     
 			<nav class="menu navbar-fixed-top">
 				<div class=""><ul class=" nav nav-pills ">
 					<li id="logo"><img src="{{ asset ('img/logo2.jpg') }}" style="height:40px; width:40px;"/> 
@@ -28,7 +14,7 @@
                     
                     </li>   
                     <li><a href="{{ path('menu_actualite')}}">Actualités</a></li>
-                    <li><a href="{{ path('menu_forum') }}">Forum,chat</a></li>        
+                    <li><a href="{{ path('menu_forum') }}">Forum</a></li>        
                     <li><a href="{{ path('menu_offre', {'page':1})}}">Emploi,Stages</a></li>
                     <li><a href="{{ path('menu_rapport',{'page':1})}}">Boite à outils</a>
                         <ul class="dropdown-menu">

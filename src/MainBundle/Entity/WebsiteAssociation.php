@@ -41,6 +41,13 @@ class WebsiteAssociation
      */
     private $adresse;
 
+	/**
+     * @var string
+     *
+     * @ORM\Column(name="codePostal", type="string", length=5, nullable=false)
+     */
+    private $codePostal;
+	
     /**
      * @var string
      *
@@ -215,5 +222,29 @@ class WebsiteAssociation
     public function getEquipeText()
     {
         return $this->equipeText;
+    }
+
+    /**
+     * Set codePostal
+     *
+     * @param string $codePostal
+     *
+     * @return WebsiteAssociation
+     */
+    public function setCodePostal($codePostal)
+    {
+        $this->codePostal = $codePostal;
+
+        return $this;
+    }
+
+    /**
+     * Get codePostal
+     *
+     * @return string
+     */
+    public function getCodePostal()
+    {
+        return $this->codePostal;
     }
 }

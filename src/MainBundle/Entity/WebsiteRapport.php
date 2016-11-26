@@ -53,5 +53,110 @@ class WebsiteRapport
     private $typeRapport;
 
 
-}
 
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set titre
+     *
+     * @param string $titre
+     *
+     * @return WebsiteRapport
+     */
+    public function setTitre($titre)
+    {
+        $this->titre = $titre;
+
+        return $this;
+    }
+
+    /**
+     * Get titre
+     *
+     * @return string
+     */
+    public function getTitre()
+    {
+        return $this->titre;
+    }
+
+    /**
+     * Set datePublication
+     *
+     * @param \DateTime $datePublication
+     *
+     * @return WebsiteRapport
+     */
+    public function setDatePublication($datePublication)
+    {
+        $this->datePublication = $datePublication;
+
+        return $this;
+    }
+
+    /**
+     * Get datePublication
+     *
+     * @return \DateTime
+     */
+    public function getDatePublication()
+    {
+        return $this->datePublication;
+    }
+
+    /**
+     * Set auteur
+     *
+     * @param string $auteur
+     *
+     * @return WebsiteRapport
+     */
+    public function setAuteur($auteur)
+    {
+        $this->auteur = $auteur;
+
+        return $this;
+    }
+
+    /**
+     * Get auteur
+     *
+     * @return string
+     */
+    public function getAuteur()
+    {
+        return $this->auteur;
+    }
+
+    /**
+     * Set typeRapport
+     *
+     * @param \MainBundle\Entity\WebsiteTypeRapport $typeRapport
+     *
+     * @return WebsiteRapport
+     */
+    public function setTypeRapport(\MainBundle\Entity\WebsiteTypeRapport $typeRapport = null)
+    {
+        $this->typeRapport = $typeRapport;
+
+        return $this;
+    }
+
+    /**
+     * Get typeRapport
+     *
+     * @return \MainBundle\Entity\WebsiteTypeRapport
+     */
+    public function getTypeRapport()
+    {
+        return $this->typeRapport;
+    }
+}

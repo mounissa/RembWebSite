@@ -40,8 +40,10 @@
      		 </form>
     </aside>
     <section class="" id="liste_rapport">
+
+      {% for elmt in list %}
       
-      <a class="fancybox fancybox.iframe" href="detail-rapport.html"><div id="resultat_recherche">
+      <a class="fancybox fancybox.iframe" href="{{ path('menu_rapport',{'id':elmt.id}) }}"><div id="resultat_recherche">
 		<span id="download" class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>
         <h4>Rapport de stage marketing operationnel</h4>
         <li class="date_publication"> Publié le 12/03/16</li>
@@ -72,24 +74,14 @@
         <li><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Par Marie</li>
 		<li><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> Paris</li>
       </div></a>
-      <nav class="article_pagination">
-				  <ul class="pagination">
-				    <li>
-				      <a href="#" aria-label="Previous">
-				        <span aria-hidden="true">&laquo;</span>
-				      </a>
-				    </li>
-				    <li class="active" ><a href="#">1</a></li>
-				    <li><a href="#">2</a></li>
-				    <li><a href="#">3</a></li>
-				    <li>
-				      <a href="#" aria-label="Next">
-				        <span aria-hidden="true">&raquo;</span>
-				      </a>
-				    </li>
-				  </ul>
-				</nav>
+      
+	{% endfor %}
     </section>
+    <nav class="article_pagination">
+            <ul class="pagination">
+				    {{ knp_pagination_render(list) }}
+			</ul>
+	  </nav>
     </div>
   	<aside class="aside_accueil col-sm-4">
 				<h3 id="titre_agenda"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>  Agenda</h3>

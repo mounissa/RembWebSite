@@ -4,21 +4,15 @@
 {% use 'MainBundle:Front:agenda.html.twig' %}
 {% block menu %}
 	 <header class="hidden-xs hidden-sm hidden-md visible-lg-inline">
-	 <div class="master top-header">
-                
+
+	 <div class="top-top-header">
+            <div class="top-header contain-g">    
                 <span id="logo">
-                    <img src="{{ asset('img/logo2.jpg') }}" />
-                    <p>Apprenons l'art de construire ensemble
+                    <!--<img src="{{ asset('img/logo2.jpg') }}" />
+                    <h3>Apprenons l'art de construire ensemble</h3>-->
+
                 </span>
-                <!--<img src="{{ asset ('img/graphic.jpg') }}" style="margin:10px;height:40px; width:340px;"/>-->
-                <ul id="social_networks">
-<!--                         <li><a href="#" class="network1"></a></li> -->
-<!--                        <li><a href="#" class="network2"></a></li> -->
-                        <li><a href="https://www.facebook.com/reseaudes.mahorais?ref=br_rs" class="network3"></a></li>
-                        
-                </ul>
-                
-                
+   
             </div>
             <nav class="menu">
                 <div class=""><ul class=" nav nav-pills ">
@@ -33,21 +27,26 @@
                     </li>   
 
                     <li><a href="{{ path('menu_actualite')}}">Actualités</a></li>
-                    <li><a href="{{ path('menu_forum') }}">Forum,chat</a></li>        
+                    <li><a href="{{ path('menu_forum') }}">Forum</a></li>        
                     <li><a href="{{ path('menu_offre', {'page':1})}}">Emploi,Stages</a></li>
                     <li><a href="{{ path('menu_rapport',{'page':1})}}">Boite à outils</a>
                         <ul class="dropdown-menu">
                             <li><a href="{{ path('menu_rapport',{'page':1})}}">Rapport de stage</a></li>
                             <li><a href="{{ path('menu_rapport',{'page':2})}}">Thèse</a></li>
-                            <li><a href="{{ path('menu_rapport',{'page':3})}}">Mémoire</a></li>   ""
+                            <li><a href="{{ path('menu_rapport',{'page':3})}}">Mémoire</a></li> 
                         </ul>
                     </li>       
                     <li><a href="{{ path('menu_contact') }}">Contact</a></li>
                     
-                
+                <ul id="social_networks">
+<!-- 						 <li><a href="#" class="network1"></a></li> -->
+<!-- 						<li><a href="#" class="network2"></a></li> -->
+						<li><a href="https://www.facebook.com/reseaudes.mahorais?ref=br_rs" class="network3"></a></li>
+						
+				</ul>
                 
              <li id="connexion"><a class="fancybox fancybox.iframe" href="{{ path('menu_connexion') }}">Connexion</a></li>
-             </ul></div>
+             </ul></div></div>
             </nav>
             <span class="ligne"></span>
         </header>
@@ -63,7 +62,7 @@
                     
                     </li>   
                     <li><a href="{{ path('menu_actualite') }}">Actualités</a></li>
-                    <li><a href="{{ path('menu_chat') }}">Forum,chat</a></li>     
+                    <li><a href="{{ path('menu_chat') }}">Forum</a></li>     
                     <li><a href="{{ path('menu_offre',{'page':1}) }}">Emploi,Stages</a></li>
                     <li><a href="{{ path('menu_rapport',{'page':1}) }}">Boite à outils</a>
                         <ul class="dropdown-menu">
@@ -72,7 +71,7 @@
                             <li><a href="{{ path('menu_rapport',{'page':3}) }}">Mémoire</a></li>
                         </ul>
                     </li>       
-                    <li><a href="{{ path('menu_contact') }}l">Contact</a></li>
+                    <li><a href="{{ path('menu_contact') }}">Contact</a></li>
                     
                 
                 <li><form class="navbar-form navbar-left" role="search">
@@ -146,7 +145,9 @@
 						
 						</p>
 						
-						
+						<div class="video-container">
+						  <iframe src="https://www.youtube.com/embed/ZQGG4ZvOcBE?playlist=avjf-r2NLQQ" allowfullscreen><p>Votre navigateur ne supporte pas l'élément iframe</p></iframe>
+						</div>
 						
 				</div>
 		

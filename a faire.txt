@@ -1,10 +1,11 @@
 - voir avec dhitoi si avoir detail evenement lorsque on clique sur en evt de l'agenda
 - maj diapo accueil à partir de l'espace admin
 - list actualite modifer le style lorsqu'on survole
-- voir si on peut appeler paginator dans repository 
+- gérer les problèmes de contraintes (cascade)
+- definir un paramètre pour le nombre d'actualité et offre par page
+- gérer bare de recherche accueil
+- ajouter bouton retour page liste des commentaires
 
+35524
+SonataAdminBundles
 
-SonataAdminBundle
-
-P1(img,img)
-P2(img,img)

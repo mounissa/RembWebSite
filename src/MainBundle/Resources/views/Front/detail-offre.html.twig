@@ -1,0 +1,34 @@
+{% extends 'MainBundle::base.html.twig' %}
+
+{% block main_master %}
+
+ 	<section class="offre">
+ 		{% autoescape %}
+ 		<h1><span class="glyphicon glyphicon-tag" aria-hidden="true"></span>{{detailOffre.titre}}, {{detailOffre.typeContrat}} ({{detailOffre.ville.libelle}})</h1>
+ 		
+ 
+ 		<label>Expérience</label>
+ 		<p> {{detailOffre.experience}}</p>
+ 		<label>Type de contrat</label>
+ 		<p> {{detailOffre.typeOffre.libelle}}</p>
+ 		<label>Secteur d'activité</label>
+ 		<p> {{detailOffre.domaine.libelle}} </p>
+ 		<label>Mission</label>
+ 		
+ 		<p>{{detailOffre.mission|raw}}</p>
+		
+			
+		<label>Profil</label>
+ 		<p>{{detailOffre.profil|raw}} </p>
+ 		<label>Rémunération</label>
+ 		<p>{{detailOffre.remuneration}} € brut/mois</p>
+ 		<label>Postuler</label>
+ 			
+			<p>Par email: {{detailOffre.emailRecruteur}} <br>
+			   Par téléphone: {{detailOffre.telRecruteur}} <br>
+			   Modalités : {{detailOffre.modalite|raw}} </p>
+ 		<button class="btn btn-primary">Postuler</button>
+ 		{% endautoescape %}
+ 	</section>
+
+{% endblock %}

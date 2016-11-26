@@ -9,8 +9,15 @@ html,body{
 	margin: 0 auto;
 	width:80%;
 	/*box-shadow:5px 5px 5px 6px silver;*/
-	padding-top:10px;
+	padding-top:25px;
+	margin-top:30px;
 	
+	
+}
+
+.contain-g{
+	margin: 0 auto;
+	width:80%;
 }
 .main{
 	margin:0px;
@@ -33,11 +40,17 @@ header ul{
 .top-header{
 	
 /* 	background-color: rgba(46, 138, 138, 1); */
-	height:auto;
+	height:160px;
+	background-image:url("../img/imagesHeader2.jpg");
+	background-repeat:none;
 	
 }
 
-
+.top-top-header{
+	
+	background-color:white;
+	margin-top:none;
+}
 p{
 	padding:5px;
 	margin:5px;	
@@ -89,8 +102,8 @@ h3{
 	height:40px;
 }
 #logo img{
-	width:60px;
-	height:6àpx;	
+	width:100px;
+	height:80px;	
 }
 
 /*Social Networks
